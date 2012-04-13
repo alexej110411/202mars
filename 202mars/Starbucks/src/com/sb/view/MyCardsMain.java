@@ -1,29 +1,31 @@
 package com.sb.view;
+
+import com.sb.controller.AppController;
+import com.sb.controller.ScreenState;
+
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class MyCardsMain  {
+public class MyCardsMain implements ScreenState {
 
-	public static int status=0;
+	public static int status = 0;
 	/************************************************************************************
 	 * Author: Sindhuja Sundarraman Course#: CMPE 202 Topic: Code for Starbucks
-	 * App - Main Screen
+	 * App - Main Screen Modified by: RENIS SHAH
 	 ************************************************************************************/
 
-	public MyCardsMain(PApplet applet) {
+	AppController appController;
 
-		status=1;
-		setup(applet);
-		//draw(applet);
-	//	mousePressed();
-		
+	public MyCardsMain(AppController p) {
+		appController = p;
 	}
-	
+
 	// Declarations
 	PImage MainCard, MyHome, Payments, MyRewards, Stores, Settings;
 	PFont f1, f2, f3, f4, f5, f6, f7;
 
+	@Override
 	public void setup(PApplet applet) {
 		// Setting the size of the screen
 		applet.size(262, 400);
@@ -82,7 +84,8 @@ public class MyCardsMain  {
 		applet.rect(0, 350, 262, 50);
 
 		// Dividing Footer into 5 parts and loading associated images
-		f3 = applet.loadFont("Calibri-Bold-8.vlw"); // for applet.text below images in footer
+		f3 = applet.loadFont("Calibri-Bold-8.vlw"); // for applet.text below
+													// images in footer
 		applet.textFont(f3, 10);
 
 		// 1. Home
@@ -135,32 +138,8 @@ public class MyCardsMain  {
 	// Initializing
 	int value = 200;
 
-/*	public void draw(PApplet applet) {
-
-		// Drawing the circle for Touch To Pay
-		applet.noStroke();
-		applet.fill(value);
-		applet.ellipse(220, 180, 50, 50);
-
-		// "Touch to pay" button
-		applet.fill(0);
-		applet.stroke(0);
-		applet.strokeWeight(3); // Thickness of the lines
-		applet.line(213, 160, 218, 160);
-		applet.line(208, 165, 218, 165);
-		applet.line(205, 170, 218, 170); // 3 lines before the $ symbol
-
-		f1 = applet.loadFont("Calibri-Bold-8.vlw"); // for the '$' symbol
-		applet.textFont(f1, 18);
-		applet.text("$", 220, 171);
-
-		f2 = applet.loadFont("Calibri-8.vlw"); // for "Touch to Pay" applet.text
-		applet.textFont(f2, 12);
-		applet.text("Touch", 205, 185);
-		applet.text("to Pay", 205, 197);
-	}
-*/
-	public void mousePressed() {
+	@Override
+	public void mousePressed(PApplet applet) {
 		if (value == 0) {
 			value = 200;
 			System.out.println("Value:200");
@@ -168,6 +147,18 @@ public class MyCardsMain  {
 			value = 0;
 			System.out.println("Value:0");
 		}
+	}
+
+	@Override
+	public void draw(PApplet applet) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
+		// TODO Auto-generated method stub
+
 	}
 
 }
