@@ -1,3 +1,4 @@
+package com.sb.view;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -80,7 +81,8 @@ public class PinScreen {
 	void mousePressed(PApplet applet) {
 		if (applet.mouseX > 0 && applet.mouseX < 88 && applet.mouseY > 240
 				&& applet.mouseY < 280) {
-			// appController.touch(1,5);
+
+			
 		}
 
 	}

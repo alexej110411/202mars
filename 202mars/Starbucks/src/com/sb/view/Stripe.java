@@ -1,3 +1,4 @@
+package com.sb.view;
 import processing.core.PApplet;
 
 public class Stripe {

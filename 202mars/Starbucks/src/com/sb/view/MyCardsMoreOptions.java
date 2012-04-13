@@ -1,8 +1,15 @@
+package com.sb.view;
+
+
+
+import com.sb.controller.AppController;
+import com.sb.controller.ScreenState;
+
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class MyCardsMoreOptions /*extends PApplet*/{
+public class MyCardsMoreOptions /* extends PApplet */implements ScreenState {
 
 	/***********
 	 * Starbucks-MyCards MoreOptions Author-Manasa Sollepura Nagaraju CMPE-202
@@ -11,9 +18,10 @@ public class MyCardsMoreOptions /*extends PApplet*/{
 	 * Modified by RENIS SHAH for integration
 	 **************/
 
-	public MyCardsMoreOptions(PApplet p) {
-		setup(p);
-		draw(p);
+	AppController appController;
+
+	public MyCardsMoreOptions(AppController p) {
+		appController=p;
 	}
 
 	// Declaring Image and Font variables
@@ -126,13 +134,20 @@ public class MyCardsMoreOptions /*extends PApplet*/{
 	}
 
 	@SuppressWarnings("static-access")
-	void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
+	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
 		applet.pushMatrix();
 		applet.translate(cx, cy);
 		applet.rotate(applet.radians(angle));
 		applet.line(len, 0, len - 8, -8);
 		applet.line(len, 0, len - 8, 8);
 		applet.popMatrix();
+	}
+
+	@Override
+	public void mousePressed(PApplet applet) {
+		// TODO Auto-generated method stub
+		System.out.println("HI......Mouse Pressed!!!!!!!!!!11");
+		
 	}
 
 }

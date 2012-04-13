@@ -1,11 +1,14 @@
+package com.sb.view;
+
+import com.sb.controller.AppController;
+import com.sb.controller.ScreenState;
+
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class MyCardOptions extends PApplet {
-	/**
-	 * 
-	 */
+public class MyCardOptions extends PApplet implements ScreenState{
+
 	private static final long serialVersionUID = 1L;
 	/***************************************
 	 * SCREEN:MY CARD OPTIONS AUTHOR:Madhumita V
@@ -15,10 +18,15 @@ public class MyCardOptions extends PApplet {
 	PImage CardImage, MyHome, Payments, MyRewards, Stores, Settings;
 	PFont f, f1;
 
-	public void callMyCardsMoreOptions() {
+	/* Modified by RENISH*/
+	
+	AppController appController;
 
+	public MyCardOptions(AppController appController) {
+		this.appController = appController;
 	}
 
+	
 	public void setupMyCardsMoreOptions() {
 		PImage MainImage, MyCards, Payments, MyRewards, Stores, Settings;
 		PFont f;
@@ -232,16 +240,13 @@ public class MyCardOptions extends PApplet {
 		text("Cancel", 105, 368);
 	}
 
-	public void draw() {
-	}
+	// public void draw() {
+	// }
 
 	public void mousePressed() {
 
-		if (MyCardsMain.status == 1) {
-			new MyCardsMain(this).mousePressed();
-		}
-
-		else if (mouseX > 30 - 205 && mouseX < 30 + 205 && mouseY > 195 - 35
+		
+		if (mouseX > 30 - 205 && mouseX < 30 + 205 && mouseY > 195 - 35
 				&& mouseY < 195 + 35) {
 			// When Button Reload Card is pressed
 			fill(250, 255, 155, 220);
@@ -260,11 +265,7 @@ public class MyCardOptions extends PApplet {
 			fill(250, 255, 155, 220);
 			rect(30, 285, 205, 35, 8, 8, 8, 8);
 
-			// MyCardsMoreOptions moreOptions = new MyCardsMoreOptions(this);
-			// MyCardsMain myCardsMain = new MyCardsMain(this);
-			PinScreen pinScreen = new PinScreen(this);
-			// moreOptions.setup();
-			// setupMyCardsMoreOptions();
+			appController.setCurrentScreen(appController.getMyCardsMoreOptions());
 
 		} else if (mouseX > 30 - 205 && mouseX < 30 + 205 && mouseY > 345 - 35
 				&& mouseY < 345 + 35) {
@@ -278,6 +279,30 @@ public class MyCardOptions extends PApplet {
 			rect(180, 5, 75, 35, 8, 8, 8, 8);
 		}
 
+	}
+
+	@Override
+	public void setup(PApplet applet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(PApplet applet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void draw(PApplet applet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
