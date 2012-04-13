@@ -3,6 +3,7 @@ package com.sb.controller;
 import com.sb.view.MyCardOptions;
 import com.sb.view.MyCardsMoreOptions;
 import com.sb.view.MyCardsPay;
+import com.sb.view.PinScreen;
 
 import processing.core.PApplet;
 
@@ -21,7 +22,8 @@ public class AppController extends PApplet {
 
 		myCardsMoreOptions = new MyCardsMoreOptions(this);
 		myCardsPay = new MyCardsPay(this);
-		currentScreen = new MyCardsPay(this);
+		pinScreen = new PinScreen(this);
+		currentScreen = pinScreen;
 		//myCardOptions=(ScreenState) new MyCardOptions(this);
 
 	}
