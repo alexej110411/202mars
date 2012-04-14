@@ -44,11 +44,11 @@ public class MyRewards implements ScreenState {
 		applet.textFont(f, 20);
 		applet.text("My Rewards", 85, 30);
 
-//		applet.line(2, 350, 260, 350); // horizontal line for common menu
-//		applet.line(52, 350, 52, 398); // verticle line for menu
-//		applet.line(104, 350, 104, 398);
-//		applet.line(159, 350, 159, 398);
-//		applet.line(208, 350, 208, 398);
+		applet.line(2, 350, 260, 350); // horizontal line for common menu
+		applet.line(52, 350, 52, 398); // verticle line for menu
+		applet.line(104, 350, 104, 398);
+		applet.line(159, 350, 159, 398);
+		applet.line(208, 350, 208, 398);
 		// above code is for the common menu at the bottom of the screen
 
 		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
@@ -61,10 +61,10 @@ public class MyRewards implements ScreenState {
 		applet.text("Settings", 215, 395);
 
 		// Images must be in the "data" directory to load correctly
-		MainImage = applet.loadImage("StarbucksSpecialEdition.png"); // Starbucks
+		MainImage = applet.loadImage("myRewardsScreen.png"); // Starbucks
 		// Special
 		// edition image
-		applet.image(MainImage, 15, 57);
+		applet.image(MainImage, 10, 57);
 
 		MyCards = applet.loadImage("Cards.png"); // Image of Card
 		applet.image(MyCards, 8, 355, 40, 25);
@@ -82,8 +82,22 @@ public class MyRewards implements ScreenState {
 		applet.image(Settings, 217, 355, 40, 25);
 
 		applet.fill(27, 125, 80); // the color for rectangle
-		applet.rect(2, 2, 259, 45);// The top rectangle for displaying text :
-									// card
+		// applet.rect(2, 2, 259, 45);// The top rectangle for displaying text :
+		// card
+
+		applet.fill(232, 225, 240);
+		applet.rect(15, 260, 230, 35, 8, 8, 0, 0); // Draw rectangle for Refresh
+		// balance
+		applet.fill(50);
+		applet.textFont(f, 15); // the font size
+		applet.text("Sign In", 20, 280);
+
+		applet.fill(232, 225, 240);
+		applet.rect(15, 295, 230, 35, 0, 0, 8, 8); // Draw rectangle for Recent
+		// transactions
+		applet.fill(50);
+		applet.textFont(f, 15); // the font size
+		applet.text("Create Account", 20, 315);
 
 	}
 
@@ -95,13 +109,22 @@ public class MyRewards implements ScreenState {
 
 	@Override
 	public void draw(PApplet applet) {
-		// TODO Auto-generated method stub
+		applet.strokeWeight(2);
+		applet.stroke(86, 83, 90);
+	//	drawArrow(115, 203, 120, 5, applet);
+		drawArrow(115, 268, 120, 5, applet);
+		drawArrow(115, 303, 120, 5, applet);
 
 	}
 
 	@Override
 	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
-		// TODO Auto-generated method stub
+		applet.pushMatrix();
+		applet.translate(cx, cy);
+		applet.rotate(applet.radians(angle));
+		applet.line(len, 0, len - 8, -8);
+		applet.line(len, 0, len - 8, 8);
+		applet.popMatrix();
 
 	}
 

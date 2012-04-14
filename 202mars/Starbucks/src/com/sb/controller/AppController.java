@@ -1,6 +1,5 @@
 package com.sb.controller;
 
-
 import com.sb.view.AddCard;
 import com.sb.view.FindStarbucks;
 import com.sb.view.MyCardOptions;
@@ -38,10 +37,11 @@ public class AppController extends PApplet {
 		myCardsMain = new MyCardsMain(this);
 		myRewards = new MyRewards(this);
 		myCardOptions = new MyCardOptions(this);
-		addCard= new AddCard(this);
+		addCard = new AddCard(this);
 		findStarbucks = new FindStarbucks(this);
 
-		setCurrentScreen(findStarbucks);
+		setCurrentScreen(myRewards);
+		//setCurrentScreen(myCardsMoreOptions);
 
 		// myCardOptions=(ScreenState) new MyCardOptions(this);
 
@@ -55,14 +55,14 @@ public class AppController extends PApplet {
 		this.myCardOptions = myCardOptions;
 	}
 
-	public ScreenState getAddCard(){
+	public ScreenState getAddCard() {
 		return addCard;
 	}
-	
-	public void setAddCard(ScreenState addCard){
-		this.addCard= addCard;
+
+	public void setAddCard(ScreenState addCard) {
+		this.addCard = addCard;
 	}
-	
+
 	public ScreenState getMyCardsMain() {
 		return myCardsMain;
 	}
@@ -94,8 +94,6 @@ public class AppController extends PApplet {
 	public void setCurrentScreen(ScreenState currentScreen) {
 		this.currentScreen = currentScreen;
 	}
-	
-	
 
 	@Override
 	public void setup() {
@@ -131,7 +129,5 @@ public class AppController extends PApplet {
 	public void setMyCardsPay(ScreenState myCardsPay) {
 		this.myCardsPay = myCardsPay;
 	}
-	
-	
 
 }
