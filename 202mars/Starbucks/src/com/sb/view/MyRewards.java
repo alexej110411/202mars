@@ -44,11 +44,11 @@ public class MyRewards implements ScreenState {
 		applet.textFont(f, 20);
 		applet.text("My Rewards", 85, 30);
 
-		applet.line(2, 350, 260, 350); // horizontal line for common menu
-		applet.line(52, 350, 52, 398); // verticle line for menu
-		applet.line(104, 350, 104, 398);
-		applet.line(159, 350, 159, 398);
-		applet.line(208, 350, 208, 398);
+//		applet.line(2, 350, 260, 350); // horizontal line for common menu
+//		applet.line(52, 350, 52, 398); // verticle line for menu
+//		applet.line(104, 350, 104, 398);
+//		applet.line(159, 350, 159, 398);
+//		applet.line(208, 350, 208, 398);
 		// above code is for the common menu at the bottom of the screen
 
 		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
