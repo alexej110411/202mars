@@ -143,15 +143,19 @@ public class MyCardsMain implements ScreenState {
 		if (value == 0) {
 			value = 200;
 			System.out.println("Value:200");
+			appController.setCurrentScreen(appController.getMyCardsPay());
 		} else {
 			value = 0;
 			System.out.println("Value:0");
+			appController.setCurrentScreen(appController.getMyCardOptions());
 		}
 	}
 
 	@Override
 	public void draw(PApplet applet) {
-		// TODO Auto-generated method stub
+
+		
+		
 
 	}
 

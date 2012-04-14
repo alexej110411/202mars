@@ -1,14 +1,21 @@
 package com.sb.controller;
 
+
 import com.sb.view.MyCardOptions;
+import com.sb.view.MyCardsMain;
 import com.sb.view.MyCardsMoreOptions;
 import com.sb.view.MyCardsPay;
+import com.sb.view.MyRewards;
 import com.sb.view.PinScreen;
 
 import processing.core.PApplet;
 
 public class AppController extends PApplet {
 
+	/**
+	 * @author RENISH
+	 * 
+	 */
 	private static final long serialVersionUID = 6361405752227066178L;
 
 	ScreenState myCardsMoreOptions;
@@ -17,15 +24,53 @@ public class AppController extends PApplet {
 	ScreenState myCardOptions;
 	ScreenState myCardsMain;
 	ScreenState pinScreen;
+	ScreenState myRewards;
 
 	public AppController() {
 
 		myCardsMoreOptions = new MyCardsMoreOptions(this);
 		myCardsPay = new MyCardsPay(this);
 		pinScreen = new PinScreen(this);
-		currentScreen = pinScreen;
-		//myCardOptions=(ScreenState) new MyCardOptions(this);
+		myCardsMain = new MyCardsMain(this);
+		myRewards = new MyRewards(this);
+		myCardOptions = new MyCardOptions(this);
 
+		setCurrentScreen(myCardsMain);
+
+		// myCardOptions=(ScreenState) new MyCardOptions(this);
+
+	}
+
+	public ScreenState getMyCardOptions() {
+		return myCardOptions;
+	}
+
+	public void setMyCardOptions(ScreenState myCardOptions) {
+		this.myCardOptions = myCardOptions;
+	}
+
+	public ScreenState getMyCardsMain() {
+		return myCardsMain;
+	}
+
+	public void setMyCardsMain(ScreenState myCardsMain) {
+		this.myCardsMain = myCardsMain;
+	}
+
+	public ScreenState getPinScreen() {
+		return pinScreen;
+	}
+
+	public void setPinScreen(ScreenState pinScreen) {
+		this.pinScreen = pinScreen;
+	}
+
+	public ScreenState getMyRewards() {
+		return myRewards;
+	}
+
+	public void setMyRewards(ScreenState myRewards) {
+		this.myRewards = myRewards;
 	}
 
 	public ScreenState getCurrentScreen() {
@@ -70,6 +115,5 @@ public class AppController extends PApplet {
 	public void setMyCardsPay(ScreenState myCardsPay) {
 		this.myCardsPay = myCardsPay;
 	}
-
 
 }

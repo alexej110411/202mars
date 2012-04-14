@@ -2,8 +2,10 @@ package com.sb.controller;
 
 import processing.core.PApplet;
 
-
-// @author: Renish
+/**
+ * @author RENISH
+ *
+ */
 
 public interface ScreenState {
 

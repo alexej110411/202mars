@@ -9,13 +9,13 @@ import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class MyCardsMoreOptions /* extends PApplet */implements ScreenState {
+public class MyCardsMoreOptions implements ScreenState {
 
 	/***********
 	 * Starbucks-MyCards MoreOptions Author-Manasa Sollepura Nagaraju CMPE-202
 	 * Spring-2012
 	 * 
-	 * Modified by RENIS SHAH for integration
+	 * Modified by: RENIS SHAH
 	 **************/
 
 	AppController appController;

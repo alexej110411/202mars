@@ -11,19 +11,15 @@ public class MyCardsPay implements ScreenState {
 
 	// StarBucks app design - team MARS
 	// Author : Anupama Patil
+	// Modified by: RENIS SHAH
+
 	AppController appController;
 
 	PFont f;
 	PImage b;
 
-	public MyCardsPay() {
-
-	}
-
-	// Modified by RENIS SHAH
-
-	public MyCardsPay(AppController p) {
-		appController = p;
+	public MyCardsPay(AppController appController) {
+		this.appController = appController;
 	}
 
 	public void setup(PApplet applet) {
@@ -179,9 +175,6 @@ public class MyCardsPay implements ScreenState {
 				System.out
 						.println("Mouse Pressed - MyCardsPay => MyCardsMoreOptions");
 
-
-				
-				
 				appController.setCurrentScreen(appController
 						.getMyCardsMoreOptions());
 				// applet.fill(255);// dummycode to test mousepress
