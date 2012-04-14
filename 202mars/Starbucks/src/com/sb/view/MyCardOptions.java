@@ -14,7 +14,8 @@ public class MyCardOptions implements ScreenState {
 	 * SCREEN:MY CARD OPTIONS AUTHOR:Madhumita V
 	 * 
 	 * Modified by RENIS SHAH
-	 ***************************************/
+	 ***************************************
+	 */
 
 	/* Loading image and Fonts */
 	PImage CardImage, MyHome, Payments, MyRewards, Stores, Settings;
@@ -42,7 +43,7 @@ public class MyCardOptions implements ScreenState {
 		applet.line(2, 398, 260, 398);
 		applet.line(260, 2, 260, 398);
 
-		/* Creating the option heading and subheading */
+		/* Creating the option heading and sub-heading */
 		applet.fill(27, 131, 87);
 		applet.rect(0, 0, 265, 47);
 		applet.fill(255);
@@ -175,6 +176,7 @@ public class MyCardOptions implements ScreenState {
 			// When Button Add New is pressed
 			applet.fill(250, 255, 155, 220);
 			applet.rect(180, 5, 75, 35, 8, 8, 8, 8);
+			appController.setCurrentScreen(appController.getAddCard());
 		}
 
 	}
