@@ -35,7 +35,7 @@ public class AppController extends PApplet {
 		myRewards = new MyRewards(this);
 		myCardOptions = new MyCardOptions(this);
 
-		setCurrentScreen(myCardsMain);
+		setCurrentScreen(myRewards);
 
 		// myCardOptions=(ScreenState) new MyCardOptions(this);
 
