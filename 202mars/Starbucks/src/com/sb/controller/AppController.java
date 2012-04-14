@@ -2,6 +2,7 @@ package com.sb.controller;
 
 
 import com.sb.view.AddCard;
+import com.sb.view.FindStarbucks;
 import com.sb.view.MyCardOptions;
 import com.sb.view.MyCardsMain;
 import com.sb.view.MyCardsMoreOptions;
@@ -27,6 +28,7 @@ public class AppController extends PApplet {
 	ScreenState pinScreen;
 	ScreenState myRewards;
 	ScreenState addCard;
+	ScreenState findStarbucks;
 
 	public AppController() {
 
@@ -37,8 +39,9 @@ public class AppController extends PApplet {
 		myRewards = new MyRewards(this);
 		myCardOptions = new MyCardOptions(this);
 		addCard= new AddCard(this);
+		findStarbucks = new FindStarbucks(this);
 
-		setCurrentScreen(myCardsMain);
+		setCurrentScreen(findStarbucks);
 
 		// myCardOptions=(ScreenState) new MyCardOptions(this);
 
