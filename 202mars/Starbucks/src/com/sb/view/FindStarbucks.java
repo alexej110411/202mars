@@ -143,30 +143,41 @@ public class FindStarbucks implements ScreenState {
 	public void mousePressed(PApplet applet) {
 		// Test if the cursor is over the Circle (Touch When Done)
 
-		if (applet.mouseX > 224 - 50 && applet.mouseX < 224 + 50
-				&& applet.mouseY > 180 - 50 && applet.mouseY < 180 + 50) {
+		if (applet.mouseX > 3 && applet.mouseX < 53
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
 			try {
-				System.out
-						.println("Mouse Pressed - MyCardsPay => MyCardsMoreOptions");
-
-				appController.setCurrentScreen(appController
-						.getMyCardsMoreOptions());
-				// applet.fill(255);// dummycode to test mousepress
-				// ellipse(224, 180, 50, 50);
+				appController.setCurrentScreen(appController.getMyCardsMain());
 			} catch (Exception e) {
 				System.out.println("Exception :" + e);
 			}
-		}// end of if
+		}
 
-		else if (applet.mouseX > 80 - 150 && applet.mouseX < 80 + 150
-				&& applet.mouseY > 90 - 55 && applet.mouseY < 90 + 55) {
-
-			System.out.println("HI......Mouse Pressed!!!!!!!!!! - MyCardsPay");
-
-			applet.fill(255);// dummy code to test mousepress
-			applet.rect(80, 90, 150, 55);
-
-		}// end of if for barcode
+		else if (applet.mouseX > 55 && applet.mouseX < 105
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getMyCardsPay());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
+		
+		else if (applet.mouseX > 108 && applet.mouseX < 158
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getMyRewards());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
+		
+		else if (applet.mouseX > 160 && applet.mouseX < 210
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getFindStarbucks());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
 	}// end of mousepressed
 
 	@Override

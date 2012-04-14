@@ -104,7 +104,7 @@ public class MyRewards implements ScreenState {
 	@Override
 	public void mousePressed(PApplet applet) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override

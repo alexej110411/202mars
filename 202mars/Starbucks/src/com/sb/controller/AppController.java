@@ -40,7 +40,7 @@ public class AppController extends PApplet {
 		addCard = new AddCard(this);
 		findStarbucks = new FindStarbucks(this);
 
-		setCurrentScreen(myRewards);
+		setCurrentScreen(findStarbucks);
 		//setCurrentScreen(myCardsMoreOptions);
 
 		// myCardOptions=(ScreenState) new MyCardOptions(this);
@@ -87,6 +87,14 @@ public class AppController extends PApplet {
 		this.myRewards = myRewards;
 	}
 
+	public ScreenState getFindStarbucks() {
+		return findStarbucks;
+	}
+
+	public void setFindStarbucks(ScreenState findStarbucks) {
+		this.findStarbucks = findStarbucks;
+	}
+
 	public ScreenState getCurrentScreen() {
 		return currentScreen;
 	}
@@ -129,5 +137,4 @@ public class AppController extends PApplet {
 	public void setMyCardsPay(ScreenState myCardsPay) {
 		this.myCardsPay = myCardsPay;
 	}
-
 }
