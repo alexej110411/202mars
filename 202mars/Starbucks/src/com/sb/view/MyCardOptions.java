@@ -20,6 +20,7 @@ public class MyCardOptions implements ScreenState {
 	/* Loading image and Fonts */
 	PImage CardImage, MyHome, Payments, MyRewards, Stores, Settings;
 	PFont f, f1;
+	Menu mn;
 
 	/* Modified by RENISH */
 
@@ -63,53 +64,9 @@ public class MyCardOptions implements ScreenState {
 		applet.line(159, 350, 159, 398);
 		applet.line(208, 350, 208, 398);
 		applet.textFont(f1, 11);
-		// 1. Home
-		applet.fill(80);
-		applet.rect(3, 352, 50, 45);
-		MyHome = applet.loadImage("MyHome.png"); // Image of MyHome
-		applet.image(MyHome, 8, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Cards", 15, 395); // Text for MyHome
-
-		// 2. Payments
-		applet.fill(80);
-		applet.rect(55, 352, 50, 45);
-		Payments = applet.loadImage("Payments.png"); // Image of Payments
-		applet.image(Payments, 60, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Payments", 60, 395); // Text for Payments
-
-		// 3. My Rewards
-		applet.fill(80);
-		applet.rect(108, 352, 50, 45);
-		MyRewards = applet.loadImage("MyRewards.png"); // Image of My Rewards
-		applet.image(MyRewards, 113, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("My Rewards", 108, 395); // Text for MyRewards
-
-		// 4. Stores
-		applet.fill(80);
-		applet.rect(160, 352, 50, 45);
-		Stores = applet.loadImage("Stores.png"); // Image of Stores
-		applet.image(Stores, 165, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Stores", 173, 395); // Text for Stores
-
-		// 5. Settings
-		applet.fill(80);
-		applet.rect(212, 352, 50, 45);
-		Settings = applet.loadImage("Settings.png"); // Image of Settings
-		applet.image(Settings, 217, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Settings", 220, 395); // Text for Settings
-
-		/* Drawing starbucks card image to screen co-ordinates */
-		applet.image(CardImage, 30, 65, 200, 125);
+		
+		mn = new Menu(appController);
+		mn.draw(applet);
 
 		/* Creating options tabs */
 		applet.fill(150, 152, 155, 220);
@@ -171,6 +128,9 @@ public class MyCardOptions implements ScreenState {
 			// When Button Cancel is pressed
 			applet.fill(250, 255, 155, 220);
 			applet.rect(30, 345, 205, 35, 8, 8, 8, 8);
+			
+			appController.setCurrentScreen(appController.getMyCardsMain());
+			
 		} else if (applet.mouseX > 180 - 75 && applet.mouseX < 180 + 75
 				&& applet.mouseY > 5 - 35 && applet.mouseY < 5 + 35) {
 			// When Button Add New is pressed

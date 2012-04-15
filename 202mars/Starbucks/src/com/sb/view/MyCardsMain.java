@@ -24,6 +24,7 @@ public class MyCardsMain implements ScreenState {
 	// Declarations
 	PImage MainCard, MyHome, Payments, MyRewards, Stores, Settings;
 	PFont f1, f2, f3, f4, f5, f6, f7;
+	Menu mn;
 
 	@Override
 	public void setup(PApplet applet) {
@@ -82,48 +83,10 @@ public class MyCardsMain implements ScreenState {
 		applet.line(0, 350, 300, 350);
 		applet.fill(50);
 		applet.rect(0, 350, 262, 50);
-
-		// Dividing Footer into 5 parts and loading associated images
-		f3 = applet.loadFont("Calibri-Bold-8.vlw"); // for applet.text below
-													// images in footer
-		applet.textFont(f3, 10);
-
-		// 1. Home
-		applet.fill(80);
-		applet.rect(3, 352, 50, 45);
-		MyHome = applet.loadImage("MyHome.png"); // Image of MyHome
-		applet.image(MyHome, 8, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Cards", 15, 395); // applet.text for MyHome
-
-		// 2. Payments
-		applet.fill(80);
-		applet.rect(55, 352, 50, 45);
-		Payments = applet.loadImage("Payments.png"); // Image of Payments
-		applet.image(Payments, 60, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Payments", 60, 395); // applet.text for Payments
-
-		// 3. My Rewards
-		applet.fill(80);
-		applet.rect(108, 352, 50, 45);
-		MyRewards = applet.loadImage("MyRewards.png"); // Image of My Rewards
-		applet.image(MyRewards, 113, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("My Rewards", 108, 395); // applet.text for MyRewards
-
-		// 4. Stores
-		applet.fill(80);
-		applet.rect(160, 352, 50, 45);
-		Stores = applet.loadImage("Stores.png"); // Image of Stores
-		applet.image(Stores, 165, 355, 40, 25);
-
-		applet.fill(255);
-		applet.text("Stores", 173, 395); // applet.text for Stores
-
+		
+		mn = new Menu(appController);
+		mn.draw(applet);
+		
 		// 5. Settings
 		applet.fill(80);
 		applet.rect(212, 352, 50, 45);
@@ -181,7 +144,5 @@ public class MyCardsMain implements ScreenState {
 	@Override
 	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
 		// TODO Auto-generated method stub
-
 	}
-
 }

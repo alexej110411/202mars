@@ -27,6 +27,7 @@ public class MyCardsMoreOptions implements ScreenState {
 	// Declaring Image and Font variables
 	PImage MainImage, MyCards, Payments, MyRewards, Stores, Settings;
 	PFont f;
+	Menu mn;
 
 	public void setup(PApplet applet) {
 		applet.size(262, 400); // size of the frame
@@ -45,14 +46,14 @@ public class MyCardsMoreOptions implements ScreenState {
 		applet.line(208, 350, 208, 398);
 		// above code is for the common menu at the bottom of the screen
 
-		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
+		/*f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
 													// Screen
 		applet.textFont(f, 11);
 		applet.text("Cards", 12, 395);
 		applet.text("Payments", 55, 395);
 		applet.text("MyRewards", 105, 395);
 		applet.text("Stores", 167, 395);
-		applet.text("Settings", 215, 395);
+		applet.text("Settings", 215, 395);*/
 
 		// Images must be in the "data" directory to load correctly
 		MainImage = applet.loadImage("StarbucksSpecialEdition.png"); // Starbucks
@@ -60,20 +61,8 @@ public class MyCardsMoreOptions implements ScreenState {
 		// edition image
 		applet.image(MainImage, 15, 57);
 
-		MyCards = applet.loadImage("Cards.png"); // Image of Card
-		applet.image(MyCards, 8, 355, 40, 25);
-
-		Payments = applet.loadImage("Payments.png"); // Image of Payments
-		applet.image(Payments, 60, 355, 40, 25);
-
-		MyRewards = applet.loadImage("MyRewards.png"); // Image of My Rewards
-		applet.image(MyRewards, 113, 355, 40, 25);
-
-		Stores = applet.loadImage("Stores.png"); // Image of Stores
-		applet.image(Stores, 165, 355, 40, 25);
-
-		Settings = applet.loadImage("Settings.png"); // Image of Settings
-		applet.image(Settings, 217, 355, 40, 25);
+		mn = new Menu(appController);
+		mn.draw(applet);
 
 		applet.fill(27, 125, 80); // the color for rectangle
 		applet.rect(2, 2, 259, 45);// The top rectangle for displaying text :
@@ -146,8 +135,6 @@ public class MyCardsMoreOptions implements ScreenState {
 	@Override
 	public void mousePressed(PApplet applet) {
 		// TODO Auto-generated method stub
-		System.out.println("HI......Mouse Pressed!!!!!!!!!!11");
-		
+		System.out.println("HI......Mouse Pressed!!!!!!!!!!11");		
 	}
-
 }
