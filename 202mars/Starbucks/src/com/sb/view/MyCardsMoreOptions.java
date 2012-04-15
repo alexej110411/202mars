@@ -46,9 +46,9 @@ public class MyCardsMoreOptions implements ScreenState {
 		applet.line(208, 350, 208, 398);
 		// above code is for the common menu at the bottom of the screen
 
-		/*f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
+		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
 													// Screen
-		applet.textFont(f, 11);
+		/*applet.textFont(f, 11);
 		applet.text("Cards", 12, 395);
 		applet.text("Payments", 55, 395);
 		applet.text("MyRewards", 105, 395);

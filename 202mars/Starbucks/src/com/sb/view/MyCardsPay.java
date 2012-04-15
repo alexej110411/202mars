@@ -18,6 +18,8 @@ public class MyCardsPay implements ScreenState {
 	PFont f;
 	PImage b;
 	Menu mn;
+	BarCode bcd;
+	TouchWhenDone tch;
 
 	public MyCardsPay(AppController appController) {
 		this.appController = appController;
@@ -44,12 +46,6 @@ public class MyCardsPay implements ScreenState {
 		applet.line(208, 350, 208, 398);
 		// above code if for the common menu at the bottom of the screen
 
-		/*applet.text("Cards", 10, 395);
-		applet.text("Payments", 53, 395);
-		applet.text("Payments", 53, 395);
-		applet.text("MyRewards", 105, 395);
-		applet.text("Stores", 167, 395);
-		applet.text("Settings", 215, 395);*/
 		// Above code is to display the menus at the bottom of the screen
 		// Following code is specific to my Screen
 		// -------------------------------------------------------------
@@ -64,7 +60,7 @@ public class MyCardsPay implements ScreenState {
 											// for :
 											// Screen pay
 		// -------------------------------------------------------------
-		applet.fill(209);
+		/*applet.fill(209);
 		applet.rect(20, 55, 220, 100);// upper applet.rectangle with scan code
 
 		applet.fill(87);
@@ -156,6 +152,12 @@ public class MyCardsPay implements ScreenState {
 		applet.ellipse(137, 240, 15, 15);
 		// above code is to display cup image and the circle on it
 		// For Menu
+*/		
+		bcd = new BarCode(appController);
+		bcd.draw(applet);
+		
+		tch = new TouchWhenDone(appController);
+		tch.draw(applet);
 		
 		mn = new Menu(appController);
 		mn.draw(applet);
