@@ -89,8 +89,11 @@ public class FindStarbucks implements ScreenState {
 
 	public void mousePressed(PApplet applet) {
 		// Test if the cursor is over the Circle (Touch When Done)
-		mn = new Menu(appController);
-		mn.mousePressed(applet);		
+		if(applet.mouseX > 3 && applet.mouseX < 210
+				&& applet.mouseY > 352 && applet.mouseY < 397){
+			mn = new Menu(appController);
+			mn.mousePressed(applet);
+		}		
 	}// end of mousepressed
 
 	@Override

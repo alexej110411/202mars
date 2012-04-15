@@ -128,7 +128,10 @@ public class MyCardsMoreOptions implements ScreenState {
 	@Override
 	public void mousePressed(PApplet applet) {
 		// TODO Auto-generated method stub
-		mn = new Menu(appController);
-		mn.mousePressed(applet);
+		if(applet.mouseX > 3 && applet.mouseX < 210
+				&& applet.mouseY > 352 && applet.mouseY < 397){
+			mn = new Menu(appController);
+			mn.mousePressed(applet);
+		}
 	}
 }
