@@ -48,13 +48,6 @@ public class MyCardsMoreOptions implements ScreenState {
 
 		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
 													// Screen
-		/*applet.textFont(f, 11);
-		applet.text("Cards", 12, 395);
-		applet.text("Payments", 55, 395);
-		applet.text("MyRewards", 105, 395);
-		applet.text("Stores", 167, 395);
-		applet.text("Settings", 215, 395);*/
-
 		// Images must be in the "data" directory to load correctly
 		MainImage = applet.loadImage("StarbucksSpecialEdition.png"); // Starbucks
 		// Special
@@ -135,6 +128,7 @@ public class MyCardsMoreOptions implements ScreenState {
 	@Override
 	public void mousePressed(PApplet applet) {
 		// TODO Auto-generated method stub
-		System.out.println("HI......Mouse Pressed!!!!!!!!!!11");		
+		mn = new Menu(appController);
+		mn.mousePressed(applet);
 	}
 }

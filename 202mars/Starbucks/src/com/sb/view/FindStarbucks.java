@@ -89,42 +89,8 @@ public class FindStarbucks implements ScreenState {
 
 	public void mousePressed(PApplet applet) {
 		// Test if the cursor is over the Circle (Touch When Done)
-
-		if (applet.mouseX > 3 && applet.mouseX < 53
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getMyCardsMain());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
-
-		else if (applet.mouseX > 55 && applet.mouseX < 105
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getMyCardsPay());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
-		
-		else if (applet.mouseX > 108 && applet.mouseX < 158
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getMyRewards());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
-		
-		else if (applet.mouseX > 160 && applet.mouseX < 210
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getFindStarbucks());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
+		mn = new Menu(appController);
+		mn.mousePressed(applet);		
 	}// end of mousepressed
 
 	@Override

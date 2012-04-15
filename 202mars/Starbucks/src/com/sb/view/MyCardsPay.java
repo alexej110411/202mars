@@ -60,99 +60,7 @@ public class MyCardsPay implements ScreenState {
 											// for :
 											// Screen pay
 		// -------------------------------------------------------------
-		/*applet.fill(209);
-		applet.rect(20, 55, 220, 100);// upper applet.rectangle with scan code
-
-		applet.fill(87);
-		applet.rect(20, 55, 50, 100);// vertical applet.rect with startbucks
-										// logo
-		applet.fill(162);
-		applet.textFont(f, 11);
-		applet.text("CARD", 35, 120);// applet.text to display in vertical
-										// screen
-
-		// Images must be in the "data" diapplet.rectory to load
-		// corapplet.rectly
-		b = applet.loadImage("logo.png");
-		applet.image(b, 25, 57);
-
-		applet.fill(87);
-		applet.rect(20, 150, 220, 20);// middle applet.rectangle
-		applet.fill(87);
-		applet.rect(20, 170, 50, 15);// bottom vertical applet.rectangle
-		applet.fill(209);
-		applet.rect(70, 170, 170, 15);// bottom horizontal applet.rectangle
-		applet.fill(255);
-		applet.rect(80, 90, 150, 55);// barcode
-		applet.fill(0);
-		applet.rect(80, 90, 10, 55);// barcode
-		applet.rect(92, 90, 1, 55);// barcode
-		applet.rect(96, 90, 1, 55);// barcode
-		applet.rect(97, 90, 1, 55);// barcode
-		applet.rect(100, 90, 1, 55);// barcode
-		applet.rect(103, 90, 1, 55);// barcode
-		applet.rect(106, 90, 2, 55);// barcode
-		applet.rect(110, 90, 1, 55);// barcode
-		applet.rect(113, 90, 1, 55);// barcode
-		applet.rect(117, 90, 1, 55);// barcode
-		applet.rect(120, 90, 2, 55);// barcode
-
-		int cols = 230; // code from processing tutorial
-		int rows = 145;
-
-		// Declare 2D array
-		int[][] myArray = new int[cols][rows];
-
-		// Initialize 2D array values
-		for (int i = 0; i < cols; i++) {
-			for (int j = 0; j < rows; j++) {
-				myArray[i][j] = (int) (applet.random(255));
-			}
-		}
-
-		// Draw points
-		for (int i = 125; i < cols; i++) {
-			for (int j = 90; j < rows; j++) {
-				applet.stroke(myArray[i][j]);
-				applet.point(i, j);
-			}
-		}// end of code from processing tutorial
-
-		// above code is for center applet.rectangle for barcode sacnning
-		// :Screen Pay
-
-		applet.fill(162);
-		applet.textFont(f, 10);
-		applet.text("Your Starbucks card number is", 90, 70);
-		applet.fill(50);
-		applet.textFont(f, 13);
-		applet.text("6055   4399   8528   8445", 85, 85);
-		// above code to display applet.text in first applet.rectangle of scan
-		// code
-
-		applet.fill(162);
-		applet.ellipse(224, 180, 50, 50);
-		applet.fill(0);
-		applet.textFont(f, 11);
-		applet.text("Touch", 210, 175);
-		applet.text("When", 210, 185);
-		applet.text("Done", 210, 195);
-		// above code for the circle with applet.text "Touch when done"
-
-		applet.fill(255);
-		// ellipse(135,210,40,7);
-		applet.ellipse(137, 214, 50, 10);
-		applet.beginShape(applet.QUADS);
-		applet.vertex(115, 215);
-		applet.vertex(125, 270);
-		applet.vertex(150, 270);
-		applet.vertex(160, 215);
-		applet.endShape();
-		applet.fill(50);
-		applet.ellipse(137, 240, 15, 15);
-		// above code is to display cup image and the circle on it
-		// For Menu
-*/		
+				
 		bcd = new BarCode(appController);
 		bcd.draw(applet);
 		
@@ -174,7 +82,10 @@ public class MyCardsPay implements ScreenState {
 	public void mousePressed(PApplet applet) {
 		// Test if the cursor is over the Circle (Touch When Done)
 
-		if (applet.mouseX > 224 - 50 && applet.mouseX < 224 + 50
+		mn = new Menu(appController);
+		mn.mousePressed(applet);
+		
+		/*if (applet.mouseX > 224 - 50 && applet.mouseX < 224 + 50
 				&& applet.mouseY > 180 - 50 && applet.mouseY < 180 + 50) {
 			try {
 				System.out
@@ -195,9 +106,9 @@ public class MyCardsPay implements ScreenState {
 			System.out.println("HI......Mouse Pressed!!!!!!!!!! - MyCardsPay");
 
 			applet.fill(255);// dummy code to test mousepress
-			applet.rect(80, 90, 150, 55);
+			applet.rect(80, 90, 150, 55);*/
 
-		}// end of if for barcode
+		//}// end of if for barcode
 	}// end of mousepressed
 
 	@Override

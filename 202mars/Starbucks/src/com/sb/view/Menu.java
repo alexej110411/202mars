@@ -80,7 +80,42 @@ public class Menu implements ScreenState {
 	}// this function is needed to make the mousepressesd() work.Its just empty
 		// but u shld have it .
 
-	public void mousePressed(PApplet applet) {		
+	public void mousePressed(PApplet applet) {
+		if (applet.mouseX > 3 && applet.mouseX < 53
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getMyCardsMain());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
+
+		else if (applet.mouseX > 55 && applet.mouseX < 105
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getMyCardsPay());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
+		
+		else if (applet.mouseX > 108 && applet.mouseX < 158
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getMyRewards());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
+		
+		else if (applet.mouseX > 160 && applet.mouseX < 210
+				&& applet.mouseY > 352 && applet.mouseY < 397) {
+			try {
+				appController.setCurrentScreen(appController.getFindStarbucks());
+			} catch (Exception e) {
+				System.out.println("Exception :" + e);
+			}
+		}
 	}// end of mousepressed
 
 	@Override

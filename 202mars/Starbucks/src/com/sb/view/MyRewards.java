@@ -84,7 +84,8 @@ public class MyRewards implements ScreenState {
 	@Override
 	public void mousePressed(PApplet applet) {
 		// TODO Auto-generated method stub
-		
+		mn = new Menu(appController);
+		mn.mousePressed(applet);
 	}
 
 	@Override

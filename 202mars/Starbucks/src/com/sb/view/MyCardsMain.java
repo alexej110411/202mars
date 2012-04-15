@@ -103,7 +103,9 @@ public class MyCardsMain implements ScreenState {
 
 	@Override
 	public void mousePressed(PApplet applet) {
-		if (value == 0) {
+		mn = new Menu(appController);
+		mn.mousePressed(applet);
+		/*if (value == 0) {
 			value = 200;
 			System.out.println("Value:200");
 			appController.setCurrentScreen(appController.getMyCardsPay());
@@ -111,7 +113,7 @@ public class MyCardsMain implements ScreenState {
 			value = 0;
 			System.out.println("Value:0");
 			appController.setCurrentScreen(appController.getMyCardOptions());
-		}
+		}*/
 	}
 
 	@Override
