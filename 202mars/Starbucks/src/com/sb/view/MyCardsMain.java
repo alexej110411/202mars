@@ -108,6 +108,10 @@ public class MyCardsMain implements ScreenState {
 			mn = new Menu(appController);
 			mn.mousePressed(applet);
 		}
+		else if(applet.mouseX > 40 && applet.mouseX < 210
+				&& applet.mouseY > 220 && applet.mouseY < 280){
+			appController.setCurrentScreen(appController.getMyCardOptions());
+		}
 		/*if (value == 0) {
 			value = 200;
 			System.out.println("Value:200");

@@ -40,7 +40,7 @@ public class AppController extends PApplet {
 		addCard = new AddCard(this);
 		findStarbucks = new FindStarbucks(this);
 
-		setCurrentScreen(findStarbucks);
+		setCurrentScreen(pinScreen);
 
 		//setCurrentScreen(myCardsMoreOptions);
 		// myCardOptions=(ScreenState) new MyCardOptions(this);
