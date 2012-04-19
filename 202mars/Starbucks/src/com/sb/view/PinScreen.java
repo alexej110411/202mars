@@ -12,6 +12,7 @@ public class PinScreen implements ScreenState {
 	AppController appController;
 	KeyPad keypad;
 	PassCode passcode;
+	String validPin = "1234";
 
 	PImage img;
 	PFont f;
@@ -116,7 +117,7 @@ public class PinScreen implements ScreenState {
 
 	}
 	
-	String s = "1234";
+	
 			
 	public void setCurrentScreen(){
 		System.out.println("pwd is" + keypad.getPassword());
@@ -124,7 +125,7 @@ public class PinScreen implements ScreenState {
 			appController.setCurrentScreen(appController.getPinScreen());
 		}
 		
-		else if((keypad.getPassword()).equals(s)){
+		else if((keypad.getPassword()).equals(validPin)){
 			appController.setCurrentScreen(appController.getMyCardsMain());
 		}
 	}
