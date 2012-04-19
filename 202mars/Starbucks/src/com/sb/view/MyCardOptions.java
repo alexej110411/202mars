@@ -103,7 +103,7 @@ public class MyCardOptions implements ScreenState {
 
 	@Override
 	public void mousePressed(PApplet applet) {
-		if (applet.mouseX > 30 - 205 && applet.mouseX < 30 + 205
+		/*if (applet.mouseX > 30 - 205 && applet.mouseX < 30 + 205
 				&& applet.mouseY > 195 - 35 && applet.mouseY < 195 + 35) {
 			// When Button Reload Card is pressed
 			applet.fill(250, 255, 155, 220);
@@ -116,8 +116,8 @@ public class MyCardOptions implements ScreenState {
 			applet.fill(250, 255, 155, 220);
 			applet.rect(30, 240, 205, 35, 8, 8, 8, 8);
 
-		} else if (applet.mouseX > 30 && applet.mouseX < 235
-				&& applet.mouseY > 285 && applet.mouseY < 320) {
+		} else*/ if (applet.mouseX > 30 && applet.mouseX < 235
+				&& applet.mouseY > 195 && applet.mouseY < 230) {
 			// When Button More Options is pressed
 			applet.fill(250, 255, 155, 220);
 			applet.rect(30, 285, 205, 35, 8, 8, 8, 8);

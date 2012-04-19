@@ -105,7 +105,10 @@ public class AddCard implements ScreenState {
 	@Override
 	public void mousePressed(PApplet applet) {
 		// TODO Auto-generated method stub
-
+		if(applet.mouseX > 5 && applet.mouseX < 80
+				&& applet.mouseY > 5 && applet.mouseY < 36){
+			appController.setCurrentScreen(appController.getMyCardOptions());
+		}
 	}
 
 	@Override
