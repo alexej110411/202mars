@@ -49,8 +49,23 @@ public class MyCardsPay implements ScreenState {
 		// Above code is to display the menus at the bottom of the screen
 		// Following code is specific to my Screen
 		// -------------------------------------------------------------
+				
+		applet.fill(255);
+		applet.ellipse(135,210,40,7);
+		applet.ellipse(137,214,50,10);
+		applet.beginShape();
+		applet.vertex(115, 215);
+		applet.vertex(125, 270);
+		applet.vertex(150, 270);
+		applet.vertex(160, 215);
 		applet.textFont(f, 20);
 		applet.text("Scan Now", 100, 300);// applet.text for : Screen Pay
+		applet.endShape();
+		applet.fill(50);
+		applet.ellipse(137,240,15,15);
+		//above code is to display cup image and the circle on it
+		
+		
 
 		applet.fill(27, 131, 87);
 		applet.rect(2, 2, 259, 45);// The top applet.rectangle for :Screen Pay
