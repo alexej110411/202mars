@@ -103,8 +103,10 @@ public class MyCardsPay implements ScreenState {
 		}
 		else if(applet.mouseX > (220 - 50) && applet.mouseX < (220 + 50)
 				&& applet.mouseY > (180 - 50) && applet.mouseY < (180 + 50)){
-			tch = new TouchWhenDone(appController);
-			tch.draw(applet);
+			/*tch = new TouchWhenDone(appController);
+			tch.draw(applet);*/
+			
+			appController.setCurrentScreen(appController.getMyCardsMain());
 		}
 	}// end of mousepressed
 
