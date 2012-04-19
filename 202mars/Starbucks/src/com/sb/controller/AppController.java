@@ -7,6 +7,7 @@ import com.sb.view.MyCardsMain;
 import com.sb.view.MyCardsMoreOptions;
 import com.sb.view.MyCardsPay;
 import com.sb.view.MyRewards;
+import com.sb.view.Payment;
 import com.sb.view.PinScreen;
 
 import processing.core.PApplet;
@@ -28,6 +29,7 @@ public class AppController extends PApplet {
 	ScreenState myRewards;
 	ScreenState addCard;
 	ScreenState findStarbucks;
+	ScreenState payment;
 
 	public AppController() {
 
@@ -39,7 +41,8 @@ public class AppController extends PApplet {
 		myCardOptions = new MyCardOptions(this);
 		addCard = new AddCard(this);
 		findStarbucks = new FindStarbucks(this);
-
+		payment = new Payment(this);
+		
 		setCurrentScreen(pinScreen);
 
 		//setCurrentScreen(myCardsMoreOptions);
@@ -120,6 +123,14 @@ public class AppController extends PApplet {
 		currentScreen.mousePressed(this);
 		currentScreen.setup(this);
 		currentScreen.draw(this);
+	}
+
+	public ScreenState getPayment() {
+		return payment;
+	}
+
+	public void setPayment(ScreenState payment) {
+		this.payment = payment;
 	}
 
 	public ScreenState getMyCardsMoreOptions() {

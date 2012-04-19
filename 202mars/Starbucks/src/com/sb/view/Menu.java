@@ -93,7 +93,7 @@ public class Menu implements ScreenState {
 		else if (applet.mouseX > 55 && applet.mouseX < 105
 				&& applet.mouseY > 352 && applet.mouseY < 397) {
 			try {
-				appController.setCurrentScreen(appController.getMyCardsPay());
+				appController.setCurrentScreen(appController.getPayment());
 			} catch (Exception e) {
 				System.out.println("Exception :" + e);
 			}

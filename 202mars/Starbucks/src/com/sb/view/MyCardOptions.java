@@ -67,10 +67,13 @@ public class MyCardOptions implements ScreenState {
 		
 		mn = new Menu(appController);
 		mn.draw(applet);
+		
+		/* Drawing starbucks card image to screen co-ordinates */
+        applet.image(CardImage, 30, 65, 200, 125);
 
 		/* Creating options tabs */
 		applet.fill(150, 152, 155, 220);
-		applet.tint(0, 153, 204, 126); // Transparent screen
+		//applet.tint(0, 153, 204, 126); // Transparent screen
 		applet.rect(0, 180, 265, 398);
 
 		applet.fill(212, 212, 214);
@@ -95,8 +98,7 @@ public class MyCardOptions implements ScreenState {
 		applet.rect(30, 345, 205, 35, 8, 8, 8, 8);
 		applet.fill(255);
 		applet.textFont(f, 20);
-		applet.text("Cancel", 105, 368);
-
+		applet.text("Cancel", 105, 368);		
 	}
 
 	@Override
@@ -114,14 +116,21 @@ public class MyCardOptions implements ScreenState {
 			applet.fill(250, 255, 155, 220);
 			applet.rect(30, 240, 205, 35, 8, 8, 8, 8);
 
-		} else if (applet.mouseX > 30 - 205 && applet.mouseX < 30 + 205
-				&& applet.mouseY > 285 - 35 && applet.mouseY < 285 + 35) {
+		} else if (applet.mouseX > 30 && applet.mouseX < 235
+				&& applet.mouseY > 285 && applet.mouseY < 320) {
 			// When Button More Options is pressed
 			applet.fill(250, 255, 155, 220);
 			applet.rect(30, 285, 205, 35, 8, 8, 8, 8);
 
-			appController.setCurrentScreen(appController
-					.getMyCardsMoreOptions());
+			appController.setCurrentScreen(appController.getAddCard());
+
+		} else if (applet.mouseX > 30 && applet.mouseX < 235
+				&& applet.mouseY > 285 && applet.mouseY < 320) {
+			// When Button More Options is pressed
+			applet.fill(250, 255, 155, 220);
+			applet.rect(30, 285, 205, 35, 8, 8, 8, 8);
+
+			appController.setCurrentScreen(appController.getMyCardsMoreOptions());
 
 		} else if (applet.mouseX > 30 - 205 && applet.mouseX < 30 + 205
 				&& applet.mouseY > 345 - 35 && applet.mouseY < 345 + 35) {
@@ -138,7 +147,6 @@ public class MyCardOptions implements ScreenState {
 			applet.rect(180, 5, 75, 35, 8, 8, 8, 8);
 			appController.setCurrentScreen(appController.getAddCard());
 		}
-
 	}
 
 	@Override
