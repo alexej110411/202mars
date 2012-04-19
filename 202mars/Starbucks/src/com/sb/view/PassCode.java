@@ -8,9 +8,6 @@ import processing.core.PFont;
 public class PassCode implements ScreenState {
 	
 	PFont f2;
-	
-	
-
 	KeyPad keypad = new KeyPad();
 
 	public void setup(PApplet applet) {
@@ -19,7 +16,7 @@ public class PassCode implements ScreenState {
 
 	@Override
 	public void mousePressed(PApplet applet) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
@@ -34,16 +31,8 @@ public class PassCode implements ScreenState {
 		applet.rect(185, 45, 40, 35);
 		
 		
-		System.out.println("password is" + keypad.getPassword());
-		
-		if(keypad.getPassword().length() == 4 && !(keypad.getPassword()).equals("1234")){
-			System.out.println("in incoreect pwd");
-			keypad.setState(keypad.getNoPinState());
-			keypad.setPassword("");
-			applet.fill(255,0,0);
-			applet.textFont(f2, 17);
-			applet.text("Incorrect Pin, enter again",45,95);			
-		}
+		System.out.println("password is" + keypad.getPassword());		
+		checkPin(applet);
 		
 		applet.textFont(f2, 80);
 		int length = keypad.getPassword().length();
@@ -80,8 +69,18 @@ public class PassCode implements ScreenState {
 
 	@Override
 	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
-		// TODO Auto-generated method stub
-
+		
+	}
+	
+	public void checkPin(PApplet applet){
+		if(keypad.getPassword().length() == 4 && !(keypad.getPassword()).equals("1234")){
+			System.out.println("in incoreect pwd");
+			keypad.setState(keypad.getNoPinState());
+			keypad.setPassword("");
+			applet.fill(255,0,0);
+			applet.textFont(f2, 17);
+			applet.text("Incorrect Pin, enter again",45,95);			
+		}
 	}
 
 }

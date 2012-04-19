@@ -61,7 +61,6 @@ public class KeyPad implements ScreenState{
 		applet.line(0, 360, 300, 360);
 
 		f = applet.loadFont("Calibri-30.vlw");
-
 		f1 = applet.loadFont("Calibri-Bold-30.vlw");
 
 		applet.textFont(f1, 17);
@@ -127,7 +126,6 @@ public class KeyPad implements ScreenState{
 
 	@Override
 	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
-		// TODO Auto-generated method stub
 		
 	}
 	
@@ -155,14 +153,6 @@ public class KeyPad implements ScreenState{
 		return FourPinState;
 	}
 	
-/*	public boolean isValid(){
-		if(password.length()==4 && password =="1234"){
-			password="";		
-			state = getNoPinState();			
-		}
-		return true;			
-	}*/
-
 	public void updatePassword(String num){
 		
 		if(num == "" && password.length()>0)

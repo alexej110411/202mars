@@ -107,13 +107,13 @@ public class PinScreen implements ScreenState {
 
 	@Override
 	public void draw(PApplet applet) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
 	@Override
 	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
-		// TODO Auto-generated method stub
+		
 
 	}
 	
