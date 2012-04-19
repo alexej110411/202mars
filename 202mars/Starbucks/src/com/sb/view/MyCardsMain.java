@@ -25,9 +25,11 @@ public class MyCardsMain implements ScreenState {
 	PImage MainCard, MyHome, Payments, MyRewards, Stores, Settings;
 	PFont f1, f2, f3, f4, f5, f6, f7;
 	Menu mn;
+	TouchWhenDone tch;
 
 	@Override
 	public void setup(PApplet applet) {
+		
 		// Setting the size of the screen
 		applet.size(262, 400);
 
@@ -112,6 +114,10 @@ public class MyCardsMain implements ScreenState {
 				&& applet.mouseY > 220 && applet.mouseY < 280){
 			appController.setCurrentScreen(appController.getMyCardOptions());
 		}
+		else if(applet.mouseX > (220 - 50) && applet.mouseX < (220 + 50)
+				&& applet.mouseY > (180 - 50) && applet.mouseY < (180 + 50)){
+			appController.setCurrentScreen(appController.getMyCardsPay());
+		}
 		/*if (value == 0) {
 			value = 200;
 			System.out.println("Value:200");
@@ -127,7 +133,7 @@ public class MyCardsMain implements ScreenState {
 	public void draw(PApplet applet) {
 
 		// Drawing the circle for Touch To Pay
-		applet.noStroke();
+		/*applet.noStroke();
 		applet.fill(value);
 		applet.ellipse(220, 180, 50, 50);
 
@@ -146,8 +152,10 @@ public class MyCardsMain implements ScreenState {
 		f2 = applet.loadFont("Calibri-8.vlw"); // for "Touch to Pay" text
 		applet.textFont(f2, 12);
 		applet.text("Touch", 205, 185);
-		applet.text("to Pay", 205, 197);
-
+		applet.text("to Pay", 205, 197);*/
+		
+		tch = new TouchWhenDone(appController);
+		tch.draw(applet);
 	}
 
 	@Override

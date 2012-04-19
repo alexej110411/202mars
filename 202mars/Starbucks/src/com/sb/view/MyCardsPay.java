@@ -86,32 +86,11 @@ public class MyCardsPay implements ScreenState {
 			mn = new Menu(appController);
 			mn.mousePressed(applet);
 		}
-		
-		
-		/*if (applet.mouseX > 224 - 50 && applet.mouseX < 224 + 50
-				&& applet.mouseY > 180 - 50 && applet.mouseY < 180 + 50) {
-			try {
-				System.out
-						.println("Mouse Pressed - MyCardsPay => MyCardsMoreOptions");
-
-				appController.setCurrentScreen(appController
-						.getMyCardsMoreOptions());
-				// applet.fill(255);// dummycode to test mousepress
-				// ellipse(224, 180, 50, 50);
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}// end of if
-
-		else if (applet.mouseX > 80 - 150 && applet.mouseX < 80 + 150
-				&& applet.mouseY > 90 - 55 && applet.mouseY < 90 + 55) {
-
-			System.out.println("HI......Mouse Pressed!!!!!!!!!! - MyCardsPay");
-
-			applet.fill(255);// dummy code to test mousepress
-			applet.rect(80, 90, 150, 55);*/
-
-		//}// end of if for barcode
+		else if(applet.mouseX > (220 - 50) && applet.mouseX < (220 + 50)
+				&& applet.mouseY > (180 - 50) && applet.mouseY < (180 + 50)){
+			tch = new TouchWhenDone(appController);
+			tch.draw(applet);
+		}
 	}// end of mousepressed
 
 	@Override

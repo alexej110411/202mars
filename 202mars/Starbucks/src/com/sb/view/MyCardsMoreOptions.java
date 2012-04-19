@@ -133,5 +133,13 @@ public class MyCardsMoreOptions implements ScreenState {
 			mn = new Menu(appController);
 			mn.mousePressed(applet);
 		}
+		else if(applet.mouseX > 7 && applet.mouseX < 52
+				&& applet.mouseY > 7 && applet.mouseY < 42){
+			appController.setCurrentScreen(appController.getMyCardsMain());
+		}
+		else if(applet.mouseX > 15 && applet.mouseX < 245
+				&& applet.mouseY > 160 && applet.mouseY < 195){
+			appController.setCurrentScreen(appController.getMyCardsMain());
+		}
 	}
 }

@@ -52,38 +52,9 @@ public class BarCode implements ScreenState {
 		applet.fill(255);
 		applet.rect(80,90,150,55);//barcode
 		applet.fill(0);
-		applet.rect(80,90,10,55);//barcode
-		applet.rect(92,90,1,55);//barcode
-		applet.rect(96,90,1,55);//barcode
-		applet.rect(97,90,1,55);//barcode
-		applet.rect(100,90,1,55);//barcode
-		applet.rect(103,90,1,55);//barcode
-		applet.rect(106,90,2,55);//barcode
-		applet.rect(110,90,1,55);//barcode
-		applet.rect(113,90,1,55);//barcode
-		applet.rect(117,90,1,55);//barcode
-		applet.rect(120,90,2,55);//barcode
-
-		int cols = 230; // code from processing tutorial
-		int rows = 145;
-
-		// Declare 2D array
-		int[][] myArray = new int[cols][rows];
-
-		// Initialize 2D array values
-		for (int i = 0; i < cols; i++) {
-		  for (int j = 0; j < rows; j++) {
-		    myArray[i][j] = (new Random(255)).nextInt();
-		  }
-		}
-
-		// Draw points
-		for (int i = 125; i < cols; i++) {
-		  for (int j = 90; j < rows; j++) {
-			  applet.stroke(myArray[i][j]);
-			  applet.point(i,j);
-		  }
-		}// end of code from processing tutorial
+		
+		b = applet.loadImage("barcode.png");
+		applet.image(b, 80, 90);
 
 		//above code is for center rectangle for barcode sacnning :Screen Pay
 
