@@ -11,8 +11,8 @@ public class MyCardOptions implements ScreenState {
 
 	private static final long serialVersionUID = 1L;
 	/***************************************
-	 * SCREEN:MY CARD OPTIONS AUTHOR:Madhumita V
-	 * 
+	 * AUTHOR:Madhumita V
+	 * SCREEN:MY CARD OPTIONS 
 	 * Modified by RENIS SHAH
 	 ***************************************
 	 */

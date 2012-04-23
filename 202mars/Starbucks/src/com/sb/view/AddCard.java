@@ -36,7 +36,6 @@ public class AddCard implements ScreenState {
 		applet.image(img, 30, 65, 200, 125);
 
 		applet.fill(176, 177, 178, 220);
-		applet.tint(0, 93, 204, 126); // Transparent screen
 		applet.rect(0, 240, 265, 318);
 		applet.line(88, 240, 88, 399);
 		applet.line(174, 240, 174, 399);
@@ -44,7 +43,6 @@ public class AddCard implements ScreenState {
 		applet.line(0, 280, 300, 280);
 		applet.line(0, 320, 300, 320);
 		applet.line(0, 360, 300, 360);
-
 		applet.rect(73, 100, 152, 22, 8, 8, 8, 8);
 		applet.rect(111, 132, 80, 22, 8, 8, 8, 8);
 

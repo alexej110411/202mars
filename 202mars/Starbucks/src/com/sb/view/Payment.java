@@ -71,7 +71,7 @@ public class Payment implements ScreenState {
 	}// end of function setup
 
 	// ---------------------------------------------------------------------------------------
-	// Following code for muse
+	// Following code for mouse
 	// events---------------------------------------------------------
 	// ............................................................................................
 	public void draw(PApplet applet) {

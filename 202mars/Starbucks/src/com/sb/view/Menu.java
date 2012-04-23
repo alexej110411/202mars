@@ -2,7 +2,6 @@ package com.sb.view;
 
 import com.sb.controller.AppController;
 import com.sb.controller.ScreenState;
-
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -20,10 +19,33 @@ public class Menu implements ScreenState {
 	public void setup(PApplet applet) {
 	}// end of function setup
 
-	// ---------------------------------------------------------------------------------------
-	// Following code for muse
-	// events---------------------------------------------------------
-	// ............................................................................................
+	/************************************************************************************
+	 * Modified By: Madhumita V 
+	 * Course#: CMPE 202 
+	 * Topic: Command Pattern implementation for Menu toolbar 
+	 **************************************************************************************/
+	public MenuItem getMenuItem(int x, int y) {
+		MenuItem menuItem = null;
+		if (x > 3 && x < 53 && y > 352 && y < 397) {
+			menuItem = new CardMainMenuItem();
+		}
+		else if (x > 55 && x < 105 && y > 352 && y < 397) {
+			menuItem = new PaymentMenuItem();
+		}
+		else if (x > 108 && x < 158 && y > 352 && y < 397) {
+			menuItem = new MyRewardMenuItem();
+		}
+		else if (x > 160 && x < 210 && y > 352 && y < 397) {
+			menuItem = new FindStarbucksMenuItem();
+		}
+		return menuItem;
+		
+	}
+	/************************************************************************************
+	 * Author: Sindhuja Sundarraman 
+	 * Course#: CMPE 202 
+	 * Topic: Code for generating Menu items toolbar
+	 *************************************************************************************/
 	public void draw(PApplet applet) {
 		applet.noStroke();
 		applet.line(0, 350, 300, 350);
@@ -77,45 +99,11 @@ public class Menu implements ScreenState {
 
 		applet.fill(255);
 		applet.text("Settings", 220, 395); // Text for Settings
-	}// this function is needed to make the mousepressesd() work.Its just empty
-		// but u shld have it .
+	}
 
 	public void mousePressed(PApplet applet) {
-		if (applet.mouseX > 3 && applet.mouseX < 53
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getMyCardsMain());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
-
-		else if (applet.mouseX > 55 && applet.mouseX < 105
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getPayment());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
-		
-		else if (applet.mouseX > 108 && applet.mouseX < 158
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getMyRewards());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
-		
-		else if (applet.mouseX > 160 && applet.mouseX < 210
-				&& applet.mouseY > 352 && applet.mouseY < 397) {
-			try {
-				appController.setCurrentScreen(appController.getFindStarbucks());
-			} catch (Exception e) {
-				System.out.println("Exception :" + e);
-			}
-		}
+		MenuItem menuItem = getMenuItem(applet.mouseX, applet.mouseY);
+		menuItem.execute(appController);
 	}// end of mousepressed
 
 	@Override
