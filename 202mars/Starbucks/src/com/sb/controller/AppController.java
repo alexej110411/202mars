@@ -9,6 +9,7 @@ import com.sb.view.MyCardsPay;
 import com.sb.view.MyRewards;
 import com.sb.view.Payment;
 import com.sb.view.PinScreen;
+import com.sb.view.CreditBalance;
 
 import processing.core.PApplet;
 
@@ -30,7 +31,8 @@ public class AppController extends PApplet {
 	ScreenState addCard;
 	ScreenState findStarbucks;
 	ScreenState payment;
-
+	float bal;
+	
 	public AppController() {
 
 		myCardsMoreOptions = new MyCardsMoreOptions(this);
@@ -42,6 +44,7 @@ public class AppController extends PApplet {
 		addCard = new AddCard(this);
 		findStarbucks = new FindStarbucks(this);
 		payment = new Payment(this);
+		bal = 20.0f;
 		
 		setCurrentScreen(pinScreen);
 
@@ -50,6 +53,14 @@ public class AppController extends PApplet {
 
 	}
 
+	public float getBalance() {
+		return this.bal;
+	}
+	
+	public void setBalanace() {
+		this.bal = this.bal - 3.60f;
+	}
+	
 	public ScreenState getMyCardOptions() {
 		return myCardOptions;
 	}

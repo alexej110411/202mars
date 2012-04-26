@@ -19,7 +19,7 @@ public class MyCardsPay implements ScreenState {
 	PImage b;
 	Menu mn;
 	BarCode bcd;
-	TouchWhenDone tch;
+	FlipScreen tch;
 
 	public MyCardsPay(AppController appController) {
 		this.appController = appController;
@@ -79,7 +79,7 @@ public class MyCardsPay implements ScreenState {
 		bcd = new BarCode(appController);
 		bcd.draw(applet);
 		
-		tch = new TouchWhenDone(appController);
+		tch = new FlipScreen(appController);
 		tch.draw(applet);
 		
 		mn = new Menu(appController);
@@ -107,7 +107,7 @@ public class MyCardsPay implements ScreenState {
 			tch.draw(applet);*/
 			
 			appController.setCurrentScreen(appController.getMyCardsMain());
-		}
+		}		 
 	}// end of mousepressed
 
 	@Override

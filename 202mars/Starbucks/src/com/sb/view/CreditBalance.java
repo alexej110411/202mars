@@ -1,5 +1,17 @@
 package com.sb.view;
 
 public class CreditBalance {
-	public float balance = 20.00f;
+	private float balance;
+	
+	public CreditBalance(float amount){
+		this.balance = amount;
+	}
+	
+	public float getBalance() {
+		return this.balance;
+	}
+	
+	public void setBalanace() {
+		this.balance -= 3.60f;
+	}
 }

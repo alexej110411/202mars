@@ -9,12 +9,12 @@ import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
 
-public class TouchWhenDone implements ScreenState {
+public class FlipScreen implements ScreenState {
 
 	AppController appController;
 	PFont f, f3;
 	
-	public TouchWhenDone(AppController appController) {
+	public FlipScreen(AppController appController) {
 		this.appController = appController;
 	}
 

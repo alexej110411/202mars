@@ -1,5 +1,9 @@
 package com.sb.view;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import com.sb.controller.AppController;
 import com.sb.controller.ScreenState;
 
@@ -25,7 +29,8 @@ public class MyCardsMain implements ScreenState {
 	PImage MainCard, MyHome, Payments, MyRewards, Stores, Settings;
 	PFont f1, f2, f3, f4, f5, f6, f7;
 	Menu mn;
-	TouchWhenDone tch;
+	FlipScreen tch;
+	CreditBalance crdbl;
 
 	@Override
 	public void setup(PApplet applet) {
@@ -69,14 +74,27 @@ public class MyCardsMain implements ScreenState {
 		/*******************************************************************************/
 		// Displaying Balance - Need to come in from Calculation!!!
 
+		Calendar cal = new GregorianCalendar();
+		String am_pm;
+		
+		int hour = cal.get(Calendar.HOUR);
+		if(cal.get(Calendar.AM_PM) == 0){
+			am_pm = "AM";
+		}
+		else {
+			am_pm = "PM";
+		}
+		
 		applet.fill(255);
 		f6 = applet.loadFont("Calibri-8.vlw");
 		applet.textFont(f6, 36);
-		applet.text("$16.50", 70, 250);
+		//applet.text("$16.50", 70, 250);
+		applet.text(appController.getBalance(), 70, 250);
 
 		f7 = applet.loadFont("Calibri-8.vlw");
 		applet.textFont(f7, 16);
-		applet.text("as of TODAY at 9:00pm", 45, 270);
+		//applet.text("as of TODAY at 9:00pm", 45, 270);
+		applet.text("as of TODAY at " + hour + am_pm, 60, 270);
 
 		/*******************************************************************************/
 
@@ -118,43 +136,11 @@ public class MyCardsMain implements ScreenState {
 				&& applet.mouseY > (180 - 50) && applet.mouseY < (180 + 50)){
 			appController.setCurrentScreen(appController.getMyCardsPay());
 		}
-		/*if (value == 0) {
-			value = 200;
-			System.out.println("Value:200");
-			appController.setCurrentScreen(appController.getMyCardsPay());
-		} else {
-			value = 0;
-			System.out.println("Value:0");
-			appController.setCurrentScreen(appController.getMyCardOptions());
-		}*/
 	}
 
 	@Override
-	public void draw(PApplet applet) {
-
-		// Drawing the circle for Touch To Pay
-		/*applet.noStroke();
-		applet.fill(value);
-		applet.ellipse(220, 180, 50, 50);
-
-		// "Touch to pay" button
-		applet.fill(0);
-		applet.stroke(0);
-		applet.strokeWeight(3); // Thickness of the lines
-		applet.line(213, 160, 218, 160);
-		applet.line(208, 165, 218, 165);
-		applet.line(205, 170, 218, 170); // 3 lines before the $ symbol
-
-		f1 = applet.loadFont("Calibri-Bold-8.vlw"); // for the '$' symbol
-		applet.textFont(f1, 18);
-		applet.text("$", 220, 171);
-
-		f2 = applet.loadFont("Calibri-8.vlw"); // for "Touch to Pay" text
-		applet.textFont(f2, 12);
-		applet.text("Touch", 205, 185);
-		applet.text("to Pay", 205, 197);*/
-		
-		tch = new TouchWhenDone(appController);
+	public void draw(PApplet applet) {		
+		tch = new FlipScreen(appController);
 		tch.draw(applet);
 	}
 
