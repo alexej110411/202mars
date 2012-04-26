@@ -31,7 +31,6 @@ public class AppController extends PApplet {
 	ScreenState addCard;
 	ScreenState findStarbucks;
 	ScreenState payment;
-	float bal;
 	
 	public AppController() {
 
@@ -44,21 +43,12 @@ public class AppController extends PApplet {
 		addCard = new AddCard(this);
 		findStarbucks = new FindStarbucks(this);
 		payment = new Payment(this);
-		bal = 20.0f;
 		
 		setCurrentScreen(pinScreen);
 
 		//setCurrentScreen(myCardsMoreOptions);
 		// myCardOptions=(ScreenState) new MyCardOptions(this);
 
-	}
-
-	public float getBalance() {
-		return this.bal;
-	}
-	
-	public void setBalanace() {
-		this.bal = this.bal - 3.60f;
 	}
 	
 	public ScreenState getMyCardOptions() {
