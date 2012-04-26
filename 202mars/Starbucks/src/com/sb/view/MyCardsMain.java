@@ -85,11 +85,13 @@ public class MyCardsMain implements ScreenState {
 			am_pm = "PM";
 		}
 		
+		crdbl = new CreditBalance();
+		
 		applet.fill(255);
 		f6 = applet.loadFont("Calibri-8.vlw");
 		applet.textFont(f6, 36);
 		//applet.text("$16.50", 70, 250);
-		applet.text(appController.getBalance(), 70, 250);
+		applet.text(crdbl.getBalance(), 70, 250);
 
 		f7 = applet.loadFont("Calibri-8.vlw");
 		applet.textFont(f7, 16);
