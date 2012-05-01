@@ -1,14 +1,24 @@
 package com.sb.view;
 
+/*
+ * Author:Manju Rajput Topic: PassCode
+ *
+ */
+
 import com.sb.controller.ScreenState;
 
 import processing.core.PApplet;
 import processing.core.PFont;
 
 public class PassCode implements ScreenState {
-	
+
 	PFont f2;
-	KeyPad keypad = new KeyPad();
+	KeyPad keypad;
+	int passcodeLength;
+
+	public PassCode(){
+		keypad = new KeyPad();
+	}
 
 	public void setup(PApplet applet) {
 
@@ -16,7 +26,7 @@ public class PassCode implements ScreenState {
 
 	@Override
 	public void mousePressed(PApplet applet) {
-		
+		// TODO Auto-generated method stub
 
 	}
 
@@ -29,58 +39,53 @@ public class PassCode implements ScreenState {
 		applet.rect(85, 45, 40, 35);
 		applet.rect(135, 45, 40, 35);
 		applet.rect(185, 45, 40, 35);
-		
-		
-		System.out.println("password is" + keypad.getPassword());		
+
+		System.out.println("password is" + keypad.getPassword());
+
 		checkPin(applet);
-		
 		applet.textFont(f2, 80);
-		int length = keypad.getPassword().length();
-		System.out.println("len" +length);
+		passcodeLength = keypad.getPassword().length();
 
-		if (length == 4) {
-			System.out.println("Inside pwd len=4");
-			applet.fill(0);
-			applet.text(".", 43, 70);
-			applet.text(".", 95, 70);
-			applet.text(".", 153, 70);
-			applet.text(".", 193, 70);
+
+		switch(passcodeLength){
+		case 4: applet.fill(0);
+				applet.text(".", 43, 70);
+				applet.text(".", 93, 70);
+				applet.text(".", 143, 70);
+				applet.text(".", 193, 70);
+				System.out.println("in4");
+				break;
+		case 3: applet.fill(0);
+				applet.text(".", 43, 70);
+				applet.text(".", 93, 70);
+				applet.text(".", 143, 70);
+				break;
+		case 2: applet.fill(0);
+				applet.text(".", 43, 70);
+				applet.text(".", 93, 70);
+				break;
+		case 1: applet.fill(0);
+				applet.text(".", 43, 70);
+				break;
 		}
+}
 
-		else if (length == 3) {
-			applet.fill(0);
-			applet.text(".", 43, 70);
-			applet.text(".", 95, 70);
-			applet.text(".", 143, 70);
-		}
+@Override
+public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
+	// TODO Auto-generated method stub
 
-		else if (length == 2) {
-			applet.fill(0);
-			applet.text(".", 43, 70);
-			applet.text(".", 95, 70);
-		}
+}
 
-		else if (length == 1) {		
-			applet.fill(0);
-			applet.text(".", 43, 70);
-		}
-
+public String checkPin(PApplet applet){
+	if(keypad.getPassword().length() == 4 && !(keypad.getPassword()).equals("1234")){
+		System.out.println("Incorrect password");
+		keypad.setState(keypad.getNoPinState());
+		keypad.setPassword("");
+		applet.fill(255,0,0);
+		applet.textFont(f2, 17);
+		applet.text("Incorrect Pin, enter again",45,95);		
 	}
-
-	@Override
-	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
-		
-	}
-	
-	public void checkPin(PApplet applet){
-		if(keypad.getPassword().length() == 4 && !(keypad.getPassword()).equals("1234")){
-			System.out.println("in incoreect pwd");
-			keypad.setState(keypad.getNoPinState());
-			keypad.setPassword("");
-			applet.fill(255,0,0);
-			applet.textFont(f2, 17);
-			applet.text("Incorrect Pin, enter again",45,95);			
-		}
-	}
+	return "Valid Pin";
+}
 
 }

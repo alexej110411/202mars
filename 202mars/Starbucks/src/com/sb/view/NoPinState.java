@@ -1,5 +1,10 @@
 package com.sb.view;
 
+/*
+ * Author:Manju Rajput Topic: NoPinState (State Pattern for Pin Screen)
+ *
+ */
+
 public class NoPinState implements PassCodeState{
 	
 	KeyPad keypad;
@@ -20,5 +25,11 @@ public class NoPinState implements PassCodeState{
 		keypad.updatePassword("");
 		keypad.setState(keypad.getNoPinState());		
 	}
+
+	@Override
+	public String getState() {
+		return "NoPinState";
+	}
+
 
 }

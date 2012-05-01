@@ -1,5 +1,10 @@
 package com.sb.view;
 
+/*
+ * Author:Manju Rajput Topic: KeyPad
+ *
+ */
+
 import com.sb.controller.ScreenState;
 
 import processing.core.PApplet;
@@ -14,6 +19,12 @@ public class KeyPad implements ScreenState{
 	String input;
 	PassCodeState state;
 	static String password = ""; 
+	
+	final private String[][] keyPadNumber = {
+			{"1","2","3"},
+			{"4","5","6"},
+			{"7","8","9"},
+			{null, "0"} };
 	
 	PassCodeState NoPinState;
 	PassCodeState OnePinState;
@@ -61,6 +72,7 @@ public class KeyPad implements ScreenState{
 		applet.line(0, 360, 300, 360);
 
 		f = applet.loadFont("Calibri-30.vlw");
+
 		f1 = applet.loadFont("Calibri-Bold-30.vlw");
 
 		applet.textFont(f1, 17);
@@ -114,23 +126,30 @@ public class KeyPad implements ScreenState{
 		KeyPad.password = password;
 	}
 	
-	
-	public void pressedNumber(String input){
-		state.pressedNumber(input);
+	public String pressedNumber(int x, int y){
+		state.pressedNumber(keyPadNumber[y-1][x-1]);
+		return keyPadNumber[y-1][x-1];
 	}
 	
-	public void backspace(){
+		
+	public String backspace(){
 		state.backspace();
+		return "bk";
 	}
 
 
 	@Override
 	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {
+		// TODO Auto-generated method stub
 		
 	}
 	
-	void setState(PassCodeState state){
+	public void setState(PassCodeState state){
 		this.state=state;
+	}
+	
+	public String getState(){
+		return state.getState();
 	}
 	
 	public PassCodeState getNoPinState(){
@@ -153,6 +172,7 @@ public class KeyPad implements ScreenState{
 		return FourPinState;
 	}
 	
+
 	public void updatePassword(String num){
 		
 		if(num == "" && password.length()>0)
