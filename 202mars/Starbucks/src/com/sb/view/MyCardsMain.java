@@ -30,7 +30,7 @@ public class MyCardsMain implements ScreenState {
 	PFont f1, f2, f3, f4, f5, f6, f7;
 	Menu mn;
 	FlipScreen tch;
-	CreditBalance crdbl;
+	private CreditBalance bal;
 
 	@Override
 	public void setup(PApplet applet) {
@@ -85,13 +85,13 @@ public class MyCardsMain implements ScreenState {
 			am_pm = "PM";
 		}
 		
-		crdbl = new CreditBalance();
+		bal = CreditBalance.getInstance();
 		
 		applet.fill(255);
 		f6 = applet.loadFont("Calibri-8.vlw");
 		applet.textFont(f6, 36);
 		//applet.text("$16.50", 70, 250);
-		applet.text(crdbl.getBalance(), 70, 250);
+		applet.text(bal.getBalance(), 70, 250);
 
 		f7 = applet.loadFont("Calibri-8.vlw");
 		applet.textFont(f7, 16);

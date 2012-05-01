@@ -14,7 +14,7 @@ public class BarCode implements ScreenState {
 	AppController appController;
 	PFont f, f3;
 	PImage b, MainCard, MyHome, Payments, MyRewards, Stores, Settings;
-	CreditBalance balance;
+	private CreditBalance balance;
 	int count = 0;
 	
 	public BarCode(AppController appController) {
@@ -73,8 +73,8 @@ public class BarCode implements ScreenState {
 		if(applet.mouseX > 80 && applet.mouseX < 230
 				&& applet.mouseY > 90 && applet.mouseY < 145){
 			if(count == 0){
-				CreditBalance bal = new CreditBalance();
-				bal.setBalanace();
+				balance = CreditBalance.getInstance();
+				balance.setBalance();
 				count++;
 			}
 		}

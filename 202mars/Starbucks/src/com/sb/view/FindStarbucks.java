@@ -85,8 +85,7 @@ public class FindStarbucks implements ScreenState {
 	// events---------------------------------------------------------
 	// ............................................................................................
 	public void draw(PApplet applet) {
-	}// this function is needed to make the mousepressesd() work.Its just empty
-		// but u shld have it .
+	}
 
 	public void mousePressed(PApplet applet) {
 		// Test if the cursor is over the Circle (Touch When Done)
