@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - MyCardsMoreOptions.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../coverage.css'/>
+  <script type='text/javascript' src='../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>Starbucks\src\com\sb\view\MyCardsMoreOptions.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package com.sb.view;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import com.sb.controller.AppController;
+import com.sb.controller.ScreenState;
+
+import processing.core.PApplet;
+import processing.core.PFont;
+import processing.core.PImage;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class MyCardsMoreOptions implements ScreenState {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/***********
+	 * Starbucks-MyCards MoreOptions Author-Manasa Sollepura Nagaraju CMPE-202
+	 * Spring-2012
+	 * 
+	 * Modified by: RENIS SHAH
+	 **************/</div><span>	/*...*/</span></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	AppController <span class='instance uncovered' title='Reads: 0 Writes: 1'>appController</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l23s0'>	public MyCardsMoreOptions(AppController p) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l24s0'>		appController=p;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l25s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// Declaring Image and Font variables</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	PImage <span class='instance uncovered' title='Reads: 0 Writes: 0'>MainImage</span>, MyCards, Payments, MyRewards, Stores, Settings;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	PFont f;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	Menu mn;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setup(PApplet applet) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l33s0'>		applet.size(262, 400); // size of the frame</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l34s0'>		applet.background(50); // screen bg color</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l35s0'>		applet.line(2, 2, 260, 2);// boundary line horizontal</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l36s0'>		applet.line(2, 2, 2, 398);// boundary line vertical</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l37s0'>		applet.line(2, 398, 260, 398);// boundary line horizontal</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l38s0'>		applet.line(260, 2, 260, 398);// boundary line vertical</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// above code is for setting the output screen size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// and creating a boundary rectangle</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>42</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l42s0'>		applet.line(2, 350, 260, 350); // horizontal line for common menu</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l43s0'>		applet.line(52, 350, 52, 398); // verticle line for menu</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l44s0'>		applet.line(104, 350, 104, 398);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l45s0'>		applet.line(159, 350, 159, 398);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l46s0'>		applet.line(208, 350, 208, 398);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// above code is for the common menu at the bottom of the screen</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>49</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l49s0'>		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='comment'>													// Screen</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Images must be in the "data" directory to load correctly</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l52s0'>		MainImage = applet.loadImage("StarbucksSpecialEdition.png"); // Starbucks</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Special</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// edition image</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l55s0'>		applet.image(MainImage, 15, 57);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l57s0'>		mn = new Menu(appController);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l58s0'>		mn.draw(applet);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>60</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l60s0'>		applet.fill(27, 125, 80); // the color for rectangle</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l61s0'>		applet.rect(2, 2, 259, 45);// The top rectangle for displaying text :</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td>&nbsp;</td>
+      <td><pre class='comment'>									// card</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// options</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>64</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l64s0'>		applet.fill(255); // the font color-white</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>65</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l65s0'>		applet.textFont(f, 20); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>66</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l66s0'>		applet.text("Card Options", 75, 30); // text("",x,y)</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>68</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l68s0'>		applet.fill(7, 85, 57); // the color for rectangle</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>69</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l69s0'>		applet.rect(7, 7, 45, 35, 8, 8, 8, 8);// The top rectangle for</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td>&nbsp;</td>
+      <td><pre class='comment'>												// displayong text</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// : card options</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l72s0'>		applet.fill(255); // the font color-white</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>73</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l73s0'>		applet.textFont(f, 14); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>74</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l74s0'>		applet.text("Cancel", 11, 29);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>76</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l76s0'>		applet.fill(255); // the font color-white</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>77</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l77s0'>		applet.textFont(f, 20); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l78s0'>		applet.text("$16.50", 168, 100);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l79s0'>		applet.textFont(f, 10);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>80</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l80s0'>		applet.text("as of TODAY at 8.30pm", 150, 120);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>82</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l82s0'>		applet.fill(232, 225, 240);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>83</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l83s0'>		applet.rect(15, 160, 230, 35, 8, 8, 0, 0); // Draw rectangle for Refresh</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// balance</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>85</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l85s0'>		applet.fill(50);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l86s0'>		applet.textFont(f, 15); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l87s0'>		applet.text("Refresh Balance", 20, 184);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>89</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l89s0'>		applet.fill(232, 225, 240);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>90</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l90s0'>		applet.rect(15, 195, 230, 35);// Draw rectangle for Reload Card</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>91</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l91s0'>		applet.fill(50);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>92</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l92s0'>		applet.textFont(f, 15); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>93</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l93s0'>		applet.text("Reload Card", 20, 217);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>95</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l95s0'>		applet.fill(232, 225, 240);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>96</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l96s0'>		applet.rect(15, 230, 230, 35); // Draw rectangle for Auto-Reload</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>97</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l97s0'>		applet.fill(50);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>98</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l98s0'>		applet.textFont(f, 15); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>99</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l99s0'>		applet.text("Auto-Reload", 20, 250);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>101</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l101s0'>		applet.fill(232, 225, 240);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>102</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l102s0'>		applet.rect(15, 265, 230, 35, 0, 0, 8, 8); // Draw rectangle for Recent</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>103</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// transactions</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>104</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l104s0'>		applet.fill(50);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>105</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l105s0'>		applet.textFont(f, 15); // the font size</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>106</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l106s0'>		applet.text("Recent Transactions", 20, 285);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>107</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l107s0'>	}// End of Setup()</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>109</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// Methods to draw arrows</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>110</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void draw(PApplet applet) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>111</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l111s0'>		applet.strokeWeight(2);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>112</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l112s0'>		applet.stroke(86, 83, 90);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>113</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l113s0'>		drawArrow(115, 203, 120, 5, applet);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>114</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l114s0'>		drawArrow(115, 238, 120, 5, applet);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>115</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l115s0'>		drawArrow(115, 273, 120, 5, applet);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>116</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l116s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>118</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@SuppressWarnings("static-access")</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>120</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l120s0'>		applet.pushMatrix();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>121</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l121s0'>		applet.translate(cx, cy);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>122</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l122s0'>		applet.rotate(applet.radians(angle));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>123</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l123s0'>		applet.line(len, 0, len - 8, -8);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>124</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l124s0'>		applet.line(len, 0, len - 8, 8);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>125</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l125s0'>		applet.popMatrix();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>126</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l126s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>128</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>129</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void mousePressed(PApplet applet) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>130</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// TODO Auto-generated method stub</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/85</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l140s0 l144s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l140s0 l140s1 l144s0')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l140s0 l140s1 l141s0 l144s0')">C: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l140s0 l140s1 l141s0 l141s1 l144s0')">D: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">E: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l140s0 l144s0')">F: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l140s0 l140s1 l144s0')">G: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l140s0 l140s1 l141s0 l144s0')">H: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l144s0')">I: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">J: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l140s0 l144s0')">K: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l140s0 l140s1 l144s0')">L: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l144s0')">M: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l144s0')">N: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">O: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l137s1 l140s0 l144s0')">P: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l144s0')">Q: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l144s0')">R: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l144s0')">S: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">T: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l136s0 l136s1 l137s0 l137s1 l138s0 l144s0')">U: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l140s0 l144s0')">V: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l140s0 l140s1 l144s0')">W: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l140s0 l140s1 l141s0 l144s0')">X: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l140s0 l140s1 l141s0 l141s1 l144s0')">Y: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">Z: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l140s0 l144s0')">AA: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l140s0 l140s1 l144s0')">AB: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l140s0 l140s1 l141s0 l144s0')">AC: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l144s0')">AD: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">AE: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l140s0 l144s0')">AF: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l140s0 l140s1 l144s0')">AG: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l144s0')">AH: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l144s0')">AI: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">AJ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l137s1 l140s0 l144s0')">AK: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l144s0')">AL: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l144s0')">AM: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l144s0')">AN: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">AO: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l136s0 l136s1 l137s0 l137s1 l138s0 l144s0')">AP: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l140s0 l144s0')">AQ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l140s0 l140s1 l144s0')">AR: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l140s0 l140s1 l141s0 l144s0')">AS: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l140s0 l140s1 l141s0 l141s1 l144s0')">AT: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">AU: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l140s0 l144s0')">AV: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l140s0 l140s1 l144s0')">AW: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l140s0 l140s1 l141s0 l144s0')">AX: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l144s0')">AY: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">AZ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l140s0 l144s0')">BA: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l140s0 l140s1 l144s0')">BB: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l144s0')">BC: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l144s0')">BD: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">BE: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l137s1 l140s0 l144s0')">BF: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l144s0')">BG: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l144s0')">BH: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l144s0')">BI: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">BJ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l136s0 l136s1 l137s0 l137s1 l138s0 l144s0')">BK: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l140s0 l144s0')">BL: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l140s0 l140s1 l144s0')">BM: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l140s0 l140s1 l141s0 l144s0')">BN: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l140s0 l140s1 l141s0 l141s1 l144s0')">BO: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">BP: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l140s0 l144s0')">BQ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l140s0 l140s1 l144s0')">BR: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l140s0 l140s1 l141s0 l144s0')">BS: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l144s0')">BT: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">BU: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l140s0 l144s0')">BV: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l140s0 l140s1 l144s0')">BW: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l144s0')">BX: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l144s0')">BY: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">BZ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l137s1 l140s0 l144s0')">CA: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l144s0')">CB: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l144s0')">CC: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l144s0')">CD: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l137s1 l140s0 l140s1 l141s0 l141s1 l142s0 l144s0')">CE: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l136s0 l136s1 l137s0 l137s1 l138s0 l144s0')">CF: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l131s0 l131s1 l132s0 l132s1 l133s0 l144s0')">CG: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>131</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l131s0' title='Executions: 0' class='uncovered'>if(applet.mouseX > 3</span> && <span id='l131s1' title='Executions: 0' class='uncovered'>applet.mouseX &lt; 210</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>132</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>				&& <span id='l132s1' title='Executions: 0' class='uncovered'>applet.mouseY > 352</span> && <span id='l132s2' title='Executions: 0' class='uncovered'>applet.mouseY &lt; 397){</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>133</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l133s0'>			mn = new Menu(appController);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>134</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l134s0'>			mn.mousePressed(applet);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>135</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>136</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		else <span id='l136s1' title='Executions: 0' class='uncovered'>if(applet.mouseX > 7</span> && <span id='l136s2' title='Executions: 0' class='uncovered'>applet.mouseX &lt; 52</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>137</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>				&& <span id='l137s1' title='Executions: 0' class='uncovered'>applet.mouseY > 7</span> && <span id='l137s2' title='Executions: 0' class='uncovered'>applet.mouseY &lt; 42){</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>138</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l138s0'>			appController.setCurrentScreen(appController.getMyCardsMain());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>139</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>140</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		else <span id='l140s1' title='Executions: 0' class='uncovered'>if(applet.mouseX > 15</span> && <span id='l140s2' title='Executions: 0' class='uncovered'>applet.mouseX &lt; 245</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>141</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>				&& <span id='l141s1' title='Executions: 0' class='uncovered'>applet.mouseY > 160</span> && <span id='l141s2' title='Executions: 0' class='uncovered'>applet.mouseY &lt; 195){</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>142</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l142s0'>			appController.setCurrentScreen(appController.getMyCardsMain());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>143</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>144</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l144s0'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>145</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

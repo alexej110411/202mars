@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - MyCardsMain.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../coverage.css'/>
+  <script type='text/javascript' src='../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>Starbucks\src\com\sb\view\MyCardsMain.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package com.sb.view;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import com.sb.controller.AppController;
+import com.sb.controller.ScreenState;
+
+import processing.core.PApplet;
+import processing.core.PFont;
+import processing.core.PImage;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l14s0'>public class MyCardsMain implements ScreenState {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l16s0'>	public static int <span class='static uncovered' title='Reads: 0 Writes: 0'>status</span> = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/************************************************************************************
+	 * Author: Sindhuja Sundarraman Course#: CMPE 202 Topic: Code for Starbucks
+	 * App - Main Screen Modified by: RENIS SHAH
+	 ************************************************************************************/</div><span>	/*...*/</span></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	AppController <span class='instance uncovered' title='Reads: 0 Writes: 1'>appController</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l24s0'>	public MyCardsMain(AppController p) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l25s0'>		appController = p;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l26s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>28</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// Declarations</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	PImage <span class='instance uncovered' title='Reads: 0 Writes: 0'>MainCard</span>, MyHome, Payments, MyRewards, Stores, Settings;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	PFont f1, f2, f3, f4, f5, f6, f7;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	Menu mn;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	FlipScreen tch;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	CreditBalance crdbl;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setup(PApplet applet) {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>38</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Setting the size of the screen</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
+        <span class='uncovered' onclick="showPath(this,'l39s0 l81s0 l85s0 l88s0 l120s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l39s0 l81s0 l82s0 l88s0 l120s0')">B: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l39s0'>		applet.size(262, 400);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Setting the background color - middle screen</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l42s0'>		applet.background(70, 10);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Drawing Green rectangular Header</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l45s0'>		applet.fill(27, 131, 87); // Color Spec from Madhumita's code</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l46s0'>		applet.rect(0, 0, 265, 47);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>48</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Text for header - My Cards</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l49s0'>		applet.fill(255);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l50s0'>		f4 = applet.loadFont("Calibri-Bold-8.vlw");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l51s0'>		applet.textFont(f4, 20);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l52s0'>		applet.text("My Cards", 80, 30);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Drawing the rectangle for smaller rectangle within Header - 'View</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// All'</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l56s0'>		applet.fill(21, 67, 54); // Color Spec from Madhumita's code</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l57s0'>		applet.rect(190, 10, 65, 25, 8, 8, 8, 8);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Text for button - View All</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l60s0'>		applet.fill(255);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l61s0'>		f5 = applet.loadFont("Calibri-Bold-8.vlw");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l62s0'>		applet.textFont(f5, 12);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l63s0'>		applet.text("View All", 200, 28);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>65</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Loading the Starbucks Green card</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>66</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l66s0'>		MainCard = applet.loadImage("StarbucksSpecialEditionCard.jpg");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>67</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l67s0'>		applet.image(MainCard, 25, 60, 210, 130);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>69</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Drawing the applet.rectangle to show the Balance</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l70s0'>		applet.noStroke();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l71s0'>		applet.fill(90);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l72s0'>		applet.rect(40, 220, 170, 60, 8, 8, 8, 8);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>74</td><td>&nbsp;</td>
+      <td><pre class='comment'>		/*******************************************************************************/</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>75</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Displaying Balance - Need to come in from Calculation!!!</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>77</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l77s0'>		Calendar cal = new GregorianCalendar();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		String am_pm;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>80</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l80s0'>		int hour = cal.get(Calendar.HOUR);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>81</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l81s0' title='Executions: 0' class='uncovered'>if(cal.get(Calendar.AM_PM) == 0)</span><span id='l81s1' title='Executions: 0' class='uncovered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>82</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l82s0'>			am_pm = "AM";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>83</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>85</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l85s0'>			am_pm = "PM";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>88</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l88s0'>		crdbl = new CreditBalance();</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>90</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l90s0'>		applet.fill(255);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>91</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l91s0'>		f6 = applet.loadFont("Calibri-8.vlw");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>92</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l92s0'>		applet.textFont(f6, 36);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>93</td><td>&nbsp;</td>
+      <td><pre class='comment'>		//applet.text("$16.50", 70, 250);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>94</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l94s0'>		applet.text(crdbl.getBalance(), 70, 250);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>96</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l96s0'>		f7 = applet.loadFont("Calibri-8.vlw");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>97</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l97s0'>		applet.textFont(f7, 16);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>98</td><td>&nbsp;</td>
+      <td><pre class='comment'>		//applet.text("as of TODAY at 9:00pm", 45, 270);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>99</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l99s0'>		applet.text("as of TODAY at " + hour + am_pm, 60, 270);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>101</td><td>&nbsp;</td>
+      <td><pre class='comment'>		/*******************************************************************************/</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>103</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// Drawing the footer</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>104</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l104s0'>		applet.noStroke();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>105</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l105s0'>		applet.line(0, 350, 300, 350);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>106</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l106s0'>		applet.fill(50);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>107</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l107s0'>		applet.rect(0, 350, 262, 50);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>109</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l109s0'>		mn = new Menu(appController);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>110</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l110s0'>		mn.draw(applet);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>112</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// 5. Settings</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>113</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l113s0'>		applet.fill(80);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>114</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l114s0'>		applet.rect(212, 352, 50, 45);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>115</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l115s0'>		Settings = applet.loadImage("Settings.png"); // Image of Settings</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>116</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l116s0'>		applet.image(Settings, 217, 355, 40, 25);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>118</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l118s0'>		applet.fill(255);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l119s0'>		applet.text("Settings", 220, 395); // applet.text for Settings</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>120</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l120s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>122</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/*******************************/</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>123</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// Initializing</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>124</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l124s0'>	int value = 200;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>126</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>127</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void mousePressed(PApplet applet) {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/85</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l137s0 l141s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l137s0 l137s1 l141s0')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l137s0 l137s1 l138s0 l141s0')">C: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l137s0 l137s1 l138s0 l138s1 l141s0')">D: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">E: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l137s0 l141s0')">F: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l137s0 l137s1 l141s0')">G: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l137s0 l137s1 l138s0 l141s0')">H: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l141s0')">I: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">J: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l137s0 l141s0')">K: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l137s0 l137s1 l141s0')">L: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l141s0')">M: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l141s0')">N: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">O: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l134s1 l137s0 l141s0')">P: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l141s0')">Q: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l141s0')">R: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l141s0')">S: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">T: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l133s0 l133s1 l134s0 l134s1 l135s0 l141s0')">U: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l137s0 l141s0')">V: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l137s0 l137s1 l141s0')">W: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l137s0 l137s1 l138s0 l141s0')">X: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l137s0 l137s1 l138s0 l138s1 l141s0')">Y: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">Z: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l137s0 l141s0')">AA: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l137s0 l137s1 l141s0')">AB: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l137s0 l137s1 l138s0 l141s0')">AC: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l141s0')">AD: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">AE: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l137s0 l141s0')">AF: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l137s0 l137s1 l141s0')">AG: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l141s0')">AH: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l141s0')">AI: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">AJ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l134s1 l137s0 l141s0')">AK: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l141s0')">AL: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l141s0')">AM: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l141s0')">AN: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">AO: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l133s0 l133s1 l134s0 l134s1 l135s0 l141s0')">AP: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l137s0 l141s0')">AQ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l137s0 l137s1 l141s0')">AR: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l137s0 l137s1 l138s0 l141s0')">AS: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l137s0 l137s1 l138s0 l138s1 l141s0')">AT: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">AU: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l137s0 l141s0')">AV: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l137s0 l137s1 l141s0')">AW: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l137s0 l137s1 l138s0 l141s0')">AX: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l141s0')">AY: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">AZ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l137s0 l141s0')">BA: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l137s0 l137s1 l141s0')">BB: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l141s0')">BC: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l141s0')">BD: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">BE: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l134s1 l137s0 l141s0')">BF: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l141s0')">BG: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l141s0')">BH: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l141s0')">BI: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">BJ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l133s0 l133s1 l134s0 l134s1 l135s0 l141s0')">BK: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l137s0 l141s0')">BL: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l137s0 l137s1 l141s0')">BM: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l137s0 l137s1 l138s0 l141s0')">BN: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l137s0 l137s1 l138s0 l138s1 l141s0')">BO: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">BP: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l137s0 l141s0')">BQ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l137s0 l137s1 l141s0')">BR: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l137s0 l137s1 l138s0 l141s0')">BS: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l141s0')">BT: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">BU: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l137s0 l141s0')">BV: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l137s0 l137s1 l141s0')">BW: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l141s0')">BX: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l141s0')">BY: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">BZ: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l134s1 l137s0 l141s0')">CA: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l141s0')">CB: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l141s0')">CC: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l141s0')">CD: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l134s1 l137s0 l137s1 l138s0 l138s1 l139s0 l141s0')">CE: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l133s0 l133s1 l134s0 l134s1 l135s0 l141s0')">CF: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l128s0 l128s1 l129s0 l129s1 l130s0 l141s0')">CG: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>128</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l128s0' title='Executions: 0' class='uncovered'>if(applet.mouseX > 3</span> && <span id='l128s1' title='Executions: 0' class='uncovered'>applet.mouseX &lt; 210</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>129</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>				&& <span id='l129s1' title='Executions: 0' class='uncovered'>applet.mouseY > 352</span> && <span id='l129s2' title='Executions: 0' class='uncovered'>applet.mouseY &lt; 397){</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>130</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l130s0'>			mn = new Menu(appController);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>131</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l131s0'>			mn.mousePressed(applet);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>132</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>133</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		else <span id='l133s1' title='Executions: 0' class='uncovered'>if(applet.mouseX > 40</span> && <span id='l133s2' title='Executions: 0' class='uncovered'>applet.mouseX &lt; 210</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>134</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>				&& <span id='l134s1' title='Executions: 0' class='uncovered'>applet.mouseY > 220</span> && <span id='l134s2' title='Executions: 0' class='uncovered'>applet.mouseY &lt; 280){</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>135</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l135s0'>			appController.setCurrentScreen(appController.getMyCardOptions());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>136</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>137</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		else <span id='l137s1' title='Executions: 0' class='uncovered'>if(applet.mouseX > (220 - 50)</span> && <span id='l137s2' title='Executions: 0' class='uncovered'>applet.mouseX &lt; (220 + 50)</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>138</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>				&& <span id='l138s1' title='Executions: 0' class='uncovered'>applet.mouseY > (180 - 50)</span> && <span id='l138s2' title='Executions: 0' class='uncovered'>applet.mouseY &lt; (180 + 50)){</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>139</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l139s0'>			appController.setCurrentScreen(appController.getMyCardsPay());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>140</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>141</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l141s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>143</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>144</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void draw(PApplet applet) {		</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>145</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l145s0'>		tch = new FlipScreen(appController);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>146</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l146s0'>		tch.draw(applet);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>147</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l147s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>149</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>150</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void drawArrow(int cx, int cy, int len, float angle, PApplet applet) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>151</td><td>&nbsp;</td>
+      <td><pre class='comment'>		// TODO Auto-generated method stub</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>152</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l152s0'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>153</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>
