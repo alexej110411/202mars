@@ -9,8 +9,8 @@ import processing.core.PImage;
 public class MyCardsMoreOptions implements ScreenState {
 
 	/***********
-	 * Starbucks-MyCards MoreOptions Author-Manasa Sollepura Nagaraju CMPE-202
-	 * Spring-2012
+	 * Starbucks-MyCards MoreOptions Author-Manasa Sollepura Nagaraju 
+	 * CMPE-202-Spring2012
 	 * 
 	 * Modified by: RENIS SHAH
 	 **************/
@@ -92,8 +92,7 @@ public class MyCardsMoreOptions implements ScreenState {
 		applet.text("Auto-Reload", 20, 250);
 
 		applet.fill(232, 225, 240);
-		applet.rect(15, 265, 230, 35, 0, 0, 8, 8); // Draw rectangle for Recent
-		// transactions
+		applet.rect(15, 265, 230, 35, 0, 0, 8, 8); // Draw rectangle for Recent transactions
 		applet.fill(50);
 		applet.textFont(f, 15); // the font size
 		applet.text("Recent Transactions", 20, 285);
