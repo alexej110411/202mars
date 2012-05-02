@@ -1,10 +1,7 @@
 package com.sb.view;
 
-
-
 import com.sb.controller.AppController;
 import com.sb.controller.ScreenState;
-
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -46,29 +43,25 @@ public class MyCardsMoreOptions implements ScreenState {
 		applet.line(208, 350, 208, 398);
 		// above code is for the common menu at the bottom of the screen
 
-		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the
-													// Screen
+		f = applet.loadFont("Calibri-Bold-48.vlw"); // Loading font for the Screen
 		// Images must be in the "data" directory to load correctly
 		MainImage = applet.loadImage("StarbucksSpecialEdition.png"); // Starbucks
-		// Special
-		// edition image
+		// Special edition image
 		applet.image(MainImage, 15, 57);
 
 		mn = new Menu(appController);
 		mn.draw(applet);
 
 		applet.fill(27, 125, 80); // the color for rectangle
-		applet.rect(2, 2, 259, 45);// The top rectangle for displaying text :
-									// card
-		// options
+		applet.rect(2, 2, 259, 45);// The top rectangle for displaying text :More Card Options
+									
 		applet.fill(255); // the font color-white
 		applet.textFont(f, 20); // the font size
 		applet.text("Card Options", 75, 30); // text("",x,y)
 
 		applet.fill(7, 85, 57); // the color for rectangle
-		applet.rect(7, 7, 45, 35, 8, 8, 8, 8);// The top rectangle for
-												// displayong text
-		// : card options
+		applet.rect(7, 7, 45, 35, 8, 8, 8, 8);// The top rectangle for  displaying text:  card options
+	
 		applet.fill(255); // the font color-white
 		applet.textFont(f, 14); // the font size
 		applet.text("Cancel", 11, 29);
@@ -133,13 +126,20 @@ public class MyCardsMoreOptions implements ScreenState {
 			mn = new Menu(appController);
 			mn.mousePressed(applet);
 		}
+		// A click on Cancel takes  to main screen
 		else if(applet.mouseX > 7 && applet.mouseX < 52
 				&& applet.mouseY > 7 && applet.mouseY < 42){
 			appController.setCurrentScreen(appController.getMyCardsMain());
 		}
+		// A click on Refresh balance takes to main screen 
 		else if(applet.mouseX > 15 && applet.mouseX < 245
 				&& applet.mouseY > 160 && applet.mouseY < 195){
 			appController.setCurrentScreen(appController.getMyCardsMain());
 		}
+		// A click on Re-load  balance takes to Add card screen
+		else if(applet.mouseX > 15 && applet.mouseX < 245
+				&& applet.mouseY > 195 && applet.mouseY < 230){
+			appController.setCurrentScreen(appController.getAddCard());
 	}
+}
 }
